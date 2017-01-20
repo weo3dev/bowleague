@@ -51,6 +51,7 @@ $ ncu -u
 # afterward, re-run npm install and re-confirm with npm outdated
 # disregard obvious misalignments (such as pinned modules based on necessary previous testing) unless large errors are discovered
 # then please alert me at https://github.com/metavurt/ng-bla/issues
+```
 
 
 # Running

@@ -6,20 +6,31 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { TeampageComponent } from './teampage/teampage.component';
 import { BarchartComponent } from './shared/barchart/barchart.component';
+
+import { HeaderComponent } from './shared/header/header.component';
+import { NavigationComponent } from './shared/navigation/navigation.component';
+
 import { routing, appRoutingProviders } from './app.routes';
+
+import { MaterialModule } from '@angular/material';
+import { LeadersComponent } from './leaders/leaders.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    HeaderComponent,
+    NavigationComponent,
     TeampageComponent,
-    BarchartComponent
+    BarchartComponent,
+    LeadersComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    routing
+    routing,
+    MaterialModule.forRoot()
   ],
   providers: [appRoutingProviders],
   bootstrap: [AppComponent]

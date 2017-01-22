@@ -1,19 +1,24 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { BrowserModule }                 from '@angular/platform-browser';
+import { NgModule }                      from '@angular/core';
+import { FormsModule }                   from '@angular/forms';
+import { HttpModule }                    from '@angular/http';
+import { routing, appRoutingProviders }  from './app.routes';
 
-import { AppComponent } from './app.component';
-import { TeampageComponent } from './teampage/teampage.component';
-import { BarchartComponent } from './shared/barchart/barchart.component';
+import { AppComponent }                  from './app.component';
+import { HeaderComponent }               from './shared/header/header.component';
+import { NavigationComponent }           from './shared/navigation/navigation.component';
 
-import { HeaderComponent } from './shared/header/header.component';
-import { NavigationComponent } from './shared/navigation/navigation.component';
 
-import { routing, appRoutingProviders } from './app.routes';
+import { HomeComponent }                 from './home/home.component';
+import { LeadersComponent }              from './leaders/leaders.component';
+import { PlayersComponent }              from './players/players.component';
+import { TeamsComponent }                from './teams/teams.component';
+import { TeamPageComponent }             from './team-page/team-page.component';
 
-import { MaterialModule } from '@angular/material';
-import { LeadersComponent } from './leaders/leaders.component';
+import { BarchartComponent }             from './shared/barchart/barchart.component';
+
+
+import { MaterialModule }                from '@angular/material';
 
 
 @NgModule({
@@ -21,9 +26,12 @@ import { LeadersComponent } from './leaders/leaders.component';
     AppComponent,
     HeaderComponent,
     NavigationComponent,
-    TeampageComponent,
-    BarchartComponent,
-    LeadersComponent
+    HomeComponent,
+    LeadersComponent,
+    TeamsComponent,
+    TeamPageComponent,
+    PlayersComponent,
+    BarchartComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +40,9 @@ import { LeadersComponent } from './leaders/leaders.component';
     routing,
     MaterialModule.forRoot()
   ],
-  providers: [appRoutingProviders],
+  providers: [
+    appRoutingProviders
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

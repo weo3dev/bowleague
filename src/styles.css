@@ -1,14 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body {
-    margin: 0;
-    padding: 0;
-}
+@import "foundation.min.css";
 
-body {
-    width: 100vw;
+img.loader-img {
     height: 100vh;
-    margin: 0;
+    width: 100vw;
+    margin: 0 auto;
 }
 
 app-header {
@@ -23,26 +20,26 @@ app-header {
     text-align: center;
     color: #FFF;
     background: #F27D0C;
-    border-bottom: #3px solid #D60;
+    border-bottom: 3px solid #d60;
 }
 
     app-header h1 {
         margin: 0;
+        font-size: 2rem;
         font-weight: 800;
         font-variant: small-caps;
     }
 
-app-navigation {
-    display: flex;
-    width: 100vw;
-    padding: 0;
-    position: fixed;    
-    bottom: 0;
-    z-index: 100;
-    background: #FFF;
-    color: rgba(0,0,0,0.25);
-    border-top: 1px solid #efefef;
-    box-shadow: 0 0 10px rgba(0,0,0,0.25);
-    justify-content: space-around;    
+.app-content {
+    margin: 5em 0 10em;
 }
+
+table {
+    border-spacing: 0;
+}
+
+table tbody tr+tr td {
+    border-top: 1px solid #DFDFDF;
+}
+
 

@@ -1,0 +1,19 @@
+<h3> a team page </h3>
+
+
+<div *ngIf="team">
+
+ 	<div *ngFor="let t of team">
+ 		<p>{{ t.name }}, {{ t.id}} </p>
+ 	</div>
+
+</div>
+
+
+<div *ngIf="!team">
+	no data. yet.
+</div>
+
+<app-barchart *ngIf="chartData" [data]="chartData"></app-barchart>
+
+

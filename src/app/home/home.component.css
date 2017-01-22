@@ -1,0 +1,50 @@
+table {
+	font-size: 0.75rem;
+	line-height: 2;
+	border-bottom: #363636;
+}
+
+thead {
+	background: #363636;
+	color: #FFF;
+}
+
+th, td {
+	border-radius: 0;
+}
+
+th {
+    margin: 0;
+    padding: 0.25em 1em;
+    text-align: center;
+    font-variant: small-caps;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+td {
+	text-align: center;
+	padding: .25rem .4rem;	
+}
+
+tr+tr td {
+	border-top: 1px solid #DFDFDF;
+}
+
+th.teamname, td.teamname {
+	text-align: left;
+}
+
+th.wlp, td.wlp {
+	text-align: center;
+}
+
+
+@media screen and (min-width: 600px) {
+	
+	table {
+		max-width: 70vw;
+		margin: 0 auto;
+	}
+
+}

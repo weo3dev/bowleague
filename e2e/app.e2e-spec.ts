@@ -1,10 +1,10 @@
-import { NgBlaPage } from './app.po';
+import { TestcasePage } from './app.po';
 
-describe('ng-bla App', function() {
-  let page: NgBlaPage;
+describe('testcase App', function() {
+  let page: TestcasePage;
 
   beforeEach(() => {
-    page = new NgBlaPage();
+    page = new TestcasePage();
   });
 
   it('should display message saying app works', () => {

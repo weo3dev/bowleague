@@ -1,36 +1,6 @@
-/* You can add global styles to this file, and also import other style files */
-
-html, body {
-    margin: 0;
-    padding: 0;
+.app-content {
+    margin: 5em 0 10em;
 }
-
-body {
-    width: 100vw;
-    height: 100vh;
-    margin: 0 !important; /* fucking kill it for now */
-}
-
-app-header {
-    position: fixed;
-    z-index: 10; /* do not leave permanent */
-    top: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 3em;
-    width: 100vw;
-    text-align: center;
-    color: #FFF;
-    background: #F27D0C;
-    border-bottom: #3px solid #D60;
-}
-
-    app-header h1 {
-        margin: 0;
-        font-weight: 800;
-        font-variant: small-caps;
-    }
 
 app-navigation {
     display: flex;
@@ -46,3 +16,6 @@ app-navigation {
     justify-content: space-around;    
 }
 
+.md-button-focus-overlay {
+    display: none;
+}

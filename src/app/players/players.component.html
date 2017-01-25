@@ -1,0 +1,13 @@
+<div *ngIf="players" class="row small-up-3 medium-up-4 large-up-5">
+  <div class="column" *ngFor="let player of players">
+    <div class="card">
+      <img src="assets/avatars/avatar-{{player.id}}.svg">
+      <div class="card-section" (click)="showPlayer(player)">
+        <h3>{{ player.name }}</h3>
+        <p>{{ player.teamname }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="!players">players list only avialable as remote load at this time</div>

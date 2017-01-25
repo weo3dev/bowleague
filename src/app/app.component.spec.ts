@@ -1,21 +1,42 @@
 /* tslint:disable:no-unused-variable */
 
 import { TestBed, async } from '@angular/core/testing';
-import { AppComponent } from './app.component';
-import { TeamPageComponent } from './teampage/teampage.component';
-
 import { RouterTestingModule } from '@angular/router/testing';
 
+import { AppComponent } from './app.component';
+import { HeaderComponent } from './shared/header/header.component';
+import { NavigationComponent } from './shared/navigation/navigation.component';
+import { HomeComponent } from './home/home.component';
+import { LeadersComponent } from './leaders/leaders.component';
+import { TeamsComponent } from './teams/teams.component';
+import { PlayersComponent } from './players/players.component';
+
+import { Router, RouterModule } from '@angular/router';
+
+import { MaterialModule } from '@angular/material';
 
 describe('AppComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      import: [
-        RouterTestingModule
-      ],
+      imports: [
+        RouterTestingModule.withRoutes(
+          [
+            {path: '', component: HomeComponent},
+            {path: 'leaders', component: LeadersComponent},
+            {path: 'teams', component: TeamsComponent},
+            {path: 'players', component: PlayersComponent}
+        ]),
+        MaterialModule.forRoot()
+      ],      
       declarations: [
-        AppComponent
-      ],
+        AppComponent,
+        HeaderComponent,
+        NavigationComponent,
+        HomeComponent,
+        LeadersComponent,
+        TeamsComponent,
+        PlayersComponent
+      ]
     });
     TestBed.compileComponents();
   });
@@ -26,13 +47,7 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   }));
 
-  it('should build without a problem', async(() => {
-      const fixture = TestBed.createComponent(AppComponent);
-      fixture.detectChanges();
-      const compiled = fixture.debugElement.nativeElement;
-      expect(compiled).toBeTruthy();
-  }));
-});
 
+});
 
 

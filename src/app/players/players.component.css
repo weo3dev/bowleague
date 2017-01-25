@@ -1,0 +1,40 @@
+h2 {
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0.005em;
+  margin-bottom: 0;
+  margin-top: 0.83em;
+}
+
+.card {
+  border-radius: 0.5em;
+  position: relative;
+  border: 1px solid #676767;  
+}
+
+
+.card-section {
+  padding: 0.25rem 0.5rem;
+  background: rgba(0,0,0,0.65);
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  line-height: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+  .card-section h3 {
+    line-height: 1;
+    margin: 0;
+    font-size: 1.2rem;    
+  }
+
+  .card-section p {
+    font-size: 0.8rem;
+    line-height: 1;
+  }
+
+  

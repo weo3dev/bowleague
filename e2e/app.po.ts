@@ -1,6 +1,6 @@
 import { browser, element, by } from 'protractor';
 
-export class NgBlaPage {
+export class TestcasePage {
   navigateTo() {
     return browser.get('/');
   }

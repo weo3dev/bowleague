@@ -1,0 +1,8 @@
+<md-list *ngIf="teams">
+  <md-list-item *ngFor="let team of teams" [routerLink]="['/teams', team.id]">
+    <img md-list-avatar src="assets/logos/team1logo.svg" alt="Team Logo FPO">
+    <h3 md-line>{{team.name}} </h3>
+  </md-list-item>
+</md-list>
+
+<div *ngIf="!teams">teams list only avialable as remote load at this time</div>

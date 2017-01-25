@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
-<<<<<<< HEAD
 import { Observable } from 'rxjs/Observable';
 
 import { Team } from '../models/team';
@@ -8,10 +7,7 @@ import { Team } from '../models/team';
 import 'rxjs/add/observable/throw';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
-=======
-import { Team } from '../models/team';
-import { Observable } from 'rxjs/Observable';
->>>>>>> 954dfc5c77f5fbcae2bdd6b4433a07d4f26a7585
+
 
 @Injectable()
 export class TeamsService {
@@ -27,11 +23,8 @@ export class TeamsService {
     .catch(this.handleError);
   }
 
-<<<<<<< HEAD
   /* grab a single team */
-=======
-    /* grab a single team */
->>>>>>> 954dfc5c77f5fbcae2bdd6b4433a07d4f26a7585
+
   getTeam(id: any): Observable<Team> {
     return this.http.get(`${this.apiUrl}/${id}`)
     .map(res => res.json())
@@ -39,10 +32,6 @@ export class TeamsService {
     .catch(this.handleError);
   }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 954dfc5c77f5fbcae2bdd6b4433a07d4f26a7585
   /* reformat the data to fit Team model */
   private toTeam(team:any): Team {
     return {

@@ -12,10 +12,9 @@ h2 {
   border: 1px solid #676767;  
 }
 
-
 .card-section {
-  padding: 0.25rem 0.5rem;
-  background: rgba(0,0,0,0.65);
+  padding: 0.25rem 0.35rem;
+  background: rgba(0,0,0,0.85);
   color: #fff;
   position: absolute;
   bottom: 0;
@@ -29,12 +28,11 @@ h2 {
   .card-section h3 {
     line-height: 1;
     margin: 0;
-    font-size: 1.2rem;    
+    font-size: 0.7rem;
   }
 
   .card-section p {
-    font-size: 0.8rem;
+    font-size: 0.5rem;
     line-height: 1;
   }
 
-  

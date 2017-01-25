@@ -20,6 +20,7 @@ export class TeampageComponent implements OnInit {
   constructor( private route: ActivatedRoute, private router: Router, private service: TeamsService) {}
 
   ngOnInit() {
+
     // give everything a chance to get loaded before starting the animation to reduce choppiness
     setTimeout(() => {
       this.generateData();

@@ -5,7 +5,6 @@ import { TeamsService } from '../shared/services/teams.service';
 
 import 'rxjs/add/operator/switchMap';
 
-
 @Component({
   templateUrl: './team-page.component.html',
   styleUrls: ['./team-page.component.css'],

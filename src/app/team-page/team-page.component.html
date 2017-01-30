@@ -2,7 +2,8 @@
 
 <app-barchart *ngIf="chartData" [data]="chartData"></app-barchart>
 
-<div *ngIf="!team">no data. yet.</div>
+<div class="content-centered" *ngIf="!team">no data. yet.</div>
+
 <div *ngIf="team" style="padding: 2rem;">
  	<div *ngFor="let t of team">
  		<p>{{ t.name }}, {{ t.id}} </p>

@@ -36,3 +36,6 @@ h2 {
     line-height: 1;
   }
 
+.content-centered {
+  text-align: center;
+}

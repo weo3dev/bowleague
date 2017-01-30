@@ -1,5 +1,5 @@
 .app-content {
-    margin: 5em 0 10em;
+    margin: 5em auto 10em;
 }
 
 app-navigation {
@@ -18,4 +18,15 @@ app-navigation {
 
 .md-button-focus-overlay {
     display: none;
+}
+
+.content-centered {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.md-button-ripple-round {
+    display: none;
+    border-radius: 0;
 }

@@ -19,3 +19,9 @@ button[md-icon-button] .caption {
 	display: none;
 }
 
+.md-button-ripple-round {
+	border-radius: 0;
+	display: none !important;
+}
+
+

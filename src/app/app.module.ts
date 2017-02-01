@@ -19,6 +19,7 @@ import { PlayersComponent }       from './players/players.component';
 
 import { MaterialModule }         from '@angular/material';
 import { BarchartComponent } from './shared/barchart/barchart.component';
+import { LinechartComponent } from './shared/linechart/linechart.component';
 
 @NgModule({
   imports: [
@@ -38,7 +39,8 @@ import { BarchartComponent } from './shared/barchart/barchart.component';
     LeadersComponent,
     TeampageComponent,
     PlayersComponent,
-    BarchartComponent
+    BarchartComponent,
+    LinechartComponent
   ],
   exports: [
     MaterialModule

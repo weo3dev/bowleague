@@ -5,6 +5,7 @@ button[md-icon-button] {
   margin: 1em 0;
   font-weight: 400;
   background: transparent;
+  border-radius: 0;
 }
 
 button[md-icon-button] .caption {
@@ -17,6 +18,7 @@ button[md-icon-button] .caption {
 
 .md-button-focus-overlay {
 	display: none;
+  background-color: rgba(0,0,0,0) !important;
 }
 
 .md-button-ripple-round {
@@ -24,4 +26,6 @@ button[md-icon-button] .caption {
 	display: none !important;
 }
 
-
+.md-button-focus-overlay, .md-button-ripple {
+  display: none;
+}

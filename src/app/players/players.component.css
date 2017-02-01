@@ -28,7 +28,7 @@ h2 {
   .card-section h3 {
     line-height: 1;
     margin: 0;
-    font-size: 0.7rem;
+    font-size: 0.55rem;
   }
 
   .card-section p {
@@ -39,3 +39,22 @@ h2 {
 .content-centered {
   text-align: center;
 }
+
+@media screen and (min-width: 40em) {
+  
+  /* medium on up */
+  .card-section p {
+    font-size: 0.5rem;
+    line-height: 1;
+  }
+
+  .card-section h3 {
+    line-height: 1;
+    margin: 0;
+    font-size: 0.7rem;
+  }  
+
+
+}
+
+

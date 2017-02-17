@@ -51,7 +51,7 @@ $ ncu -u
 # afterward, re-run npm install and re-confirm with npm outdated
 # disregard obvious misalignments (such as pinned modules based on necessary previous testing) unless large errors are discovered
 # then please alert me at https://github.com/metavurt/ng-bla/issues
-
+```
 
 # Running
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

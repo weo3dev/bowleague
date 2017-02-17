@@ -1,6 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { OnChanges, ViewChild, ElementRef, Input, ViewEncapsulation } from '@angular/core';
-
+import { Component, OnInit, OnChanges, ViewChild, ElementRef, Input, ViewEncapsulation } from '@angular/core';
 import * as d3 from 'd3';
 
 
@@ -31,12 +29,6 @@ export class LinechartComponent implements OnInit {
 	private xAxis: any;
 	private yAxis: any;
 
-	xRange: any;
-	yRange: any;
-
-	private vis: any;
-
-
   constructor() { }
 
   ngOnInit() {
@@ -47,6 +39,7 @@ export class LinechartComponent implements OnInit {
     let element = this.chartContainer.nativeElement;
     this.width = element.offsetWidth - this.margin.left - this.margin.right;
     this.height = element.offsetHeight - this.margin.top - this.margin.bottom;
+
     let svg = d3.select(element).append('svg')
       .attr('width', element.offsetWidth)
       .attr('height', element.offsetHeight);
@@ -74,20 +67,30 @@ export class LinechartComponent implements OnInit {
       .attr('transform', `translate(${this.margin.left}, ${this.margin.top})`)
       .call(d3.axisLeft(this.yScale));
 
-		// var lineFunc = svg.line()
-		// .x(function(d) {
-		// return xRange(d.x);
-		// })
-		// .y(function(d) {
-		// return yRange(d.y);
-		// })
-		// .interpolate('linear');
+    element.append("svg:g")
+      .attr("class", "x axis")
+      .attr("transform", "translate(0," + (this.height - this.margin.bottom) + ")")
+      .call(this.xAxis);
 
-		// this.vis.append('svg:path')
-		//   .attr('d', lineFunc(this.chartData))
-		//   .attr('stroke', 'blue')
-		//   .attr('stroke-width', 2)
-		//   .attr('fill', 'none');
+    element.append("svg:g")
+      .attr("class", "y axis")
+      .attr("transform", "translate(" + (this.margin.left) + ",0)")
+      .call(this.yAxis);
+
+		var lineFunc = svg.line()
+		.x(function(d) {
+		return this.xRange(d.x);
+		})
+		.y(function(d) {
+		return this.yRange(d.y);
+		})
+		.interpolate('linear');
+
+		element.append('svg:path')
+		  .attr('d', lineFunc(this.chartData))
+		  .attr('stroke', 'blue')
+		  .attr('stroke-width', 2)
+		  .attr('fill', 'none');
   }
 
 }

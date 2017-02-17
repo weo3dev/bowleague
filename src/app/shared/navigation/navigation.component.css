@@ -16,7 +16,7 @@ button[md-icon-button] .caption {
   color: #F27D0C;
 }
 
-.md-button-focus-overlay {
+.md-button-focus-overlay, .md-button-focus-overlay:hover, .md-button-focus {
 	display: none;
   background-color: rgba(0,0,0,0) !important;
 }

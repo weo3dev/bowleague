@@ -31,7 +31,7 @@ export class TeampageComponent implements OnInit {
 
   generateData() {
     this.chartData = [];
-    for (let i = 0; i < (8 + Math.floor(Math.random() * 10)); i++) {
+    for (let i = 0; i < (8 + Math.floor(Math.random() * 6)); i++) {
       this.chartData.push([
         `Index ${i}`,
         Math.floor(Math.random() * 100)

@@ -2,32 +2,26 @@
     <table class="table-standings unstriped">
         <caption>Current League Standings</caption>
         <thead>
-           <!--  <tr>
-                <th colspan="6"></th>
-                <th colspan="3" scope="colgroup">With Handicap</th>
-            </tr> -->
+            <tr>
                 <th class="wlp"></th>
                 <th class="teamname">Name</th>
                 <th class="wlp">W</th>
                 <th class="wlp">L</th>
                 <th class="wlp">Pct</th>
                 <th>Pins</th>
-               <!--  <th>Avg</th>
-                <th>High Game</th>
-                <th>Series</th> -->
             </tr>
         </thead>
         <tbody *ngIf="standings" class="table-players-list">
-            <tr *ngFor="let place of standings; let i = index">
-                <td class="wlp">{{i+1}}</td>
+
+<!--  tr *ngFor="let place of standings; let i = index" -->
+
+            <tr *ngFor="let place of standings; let i=index">
+                <td class="wlp">{{i + 1}}</td>
                 <td class="teamname">{{place.tname}}</td>
                 <td class="wlp">{{place.wins}}</td>
                 <td class="wlp">{{place.loss}}</td>
                 <td class="wlp">{{place.pcnt}}</td>
                 <td>{{place.tpins}}</td>
-                <!-- <td></td>
-                <td></td>
-                <td></td> -->
             </tr>
         </tbody>
         <tbody *ngIf="!standings">

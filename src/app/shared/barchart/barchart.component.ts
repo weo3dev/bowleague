@@ -9,31 +9,31 @@ import * as d3 from 'd3';
   encapsulation: ViewEncapsulation.None
 })
 export class BarchartComponent implements OnInit, OnChanges {
-  @ViewChild('chart') private chartContainer: ElementRef;
-  @Input() private data: Array<any>;
+  @ViewChild('chart') chartContainer: ElementRef;
+  @Input() data: Array<any>;
   
-  private margin: any = { top: 20, bottom: 20, left: 20, right: 20};
-  private chart: any;
-  private width: number;
-  private height: number;
-  private xScale: any;
-  private yScale: any;
-  private colors: any;
-  private xAxis: any;
-  private yAxis: any;
+  margin: any = { top: 20, bottom: 20, left: 20, right: 20};
+  chart: any;
+  width: number;
+  height: number;
+  xScale: any;
+  yScale: any;
+  colors: any;
+  xAxis: any;
+  yAxis: any;
 
   constructor() { }
 
   ngOnInit() {
-    this.createChart();
+    //this.createChart();
     if (this.data) {
-      this.updateChart();
+      //this.updateChart();
     }
   }
 
   ngOnChanges() {
     if (this.chart) {
-      this.updateChart();
+      //this.updateChart();
     }
   }
 

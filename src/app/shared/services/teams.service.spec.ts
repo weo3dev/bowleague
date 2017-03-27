@@ -11,7 +11,7 @@ describe('TeamsService', () => {
 	let mockBackend: MockBackend;
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [TeamsService,MockBackend,BaseRequestOptions{
+      providers: [ TeamsService, MockBackend, BaseRequestOptions, {
       	provide: Http,
       	useFactory: (backend: ConnectionBackend, options: BaseRequestOptions) => new Http(backend, options),
       	deps: [MockBackend, BaseRequestOptions]

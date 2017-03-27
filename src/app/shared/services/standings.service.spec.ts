@@ -12,7 +12,7 @@ describe('StandingsService', () => {
 	let mockBackend: MockBackend;
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [StandingsService,MockBackend,BaseRequestOptions{
+      providers: [ StandingsService, MockBackend, BaseRequestOptions, {
       	provide: Http,
       	useFactory: (backend: ConnectionBackend, options: BaseRequestOptions) => new Http(backend, options),
       	deps: [MockBackend, BaseRequestOptions]

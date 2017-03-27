@@ -14,7 +14,7 @@ export class TeampageComponent implements OnInit {
   
   errorMessage: string;
   team: Team;  
-  private chartData: Array<any>;
+  chartData: Array<any>;
 
   constructor( private route: ActivatedRoute, private router: Router, private service: TeamsService) {}
 

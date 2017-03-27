@@ -18,6 +18,9 @@ import { PlayersComponent }       from './players/players.component';
 
 import { MaterialModule }         from '@angular/material';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
+
 
 @NgModule({
   imports: [
@@ -26,6 +29,8 @@ import { MaterialModule }         from '@angular/material';
     HttpModule,
     RouterModule,
     appRoutes,
+    BrowserAnimationsModule,
+    NgxChartsModule,
     MaterialModule.forRoot()
   ],
   declarations: [

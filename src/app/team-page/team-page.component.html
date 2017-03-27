@@ -1,8 +1,19 @@
 <h3>teampage</h3>
 
-<!-- <app-barchart *ngIf="chartData" [data]="chartData"></app-barchart> -->
-
-<!-- <app-linechart [data]="chartData"></app-linechart> -->
+ <ngx-charts-bar-vertical
+      [view]="view"
+      [scheme]="colorScheme"
+      [results]="single"
+      [gradient]="gradient"
+      [xAxis]="showXAxis"
+      [yAxis]="showYAxis"
+      [legend]="showLegend"
+      [showXAxisLabel]="showXAxisLabel"
+      [showYAxisLabel]="showYAxisLabel"
+      [xAxisLabel]="xAxisLabel"
+      [yAxisLabel]="yAxisLabel"
+      (select)="onSelect($event)">
+</ngx-charts-bar-vertical>
 
 <div class="content-centered" *ngIf="!team">no data. yet.</div>
 

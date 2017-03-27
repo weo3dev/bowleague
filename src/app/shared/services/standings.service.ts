@@ -5,7 +5,7 @@ import { Observable } from 'rxjs/Observable';
 @Injectable()
 export class StandingsService {
 
-  private apiUrl: string = '/ng-bla/api/standings';
+  private apiUrl: string = '/bowleague/api/standings';
 
   constructor(private http: Http) {}
 

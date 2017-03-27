@@ -13,14 +13,14 @@
 - [Todo](#todo)
 - [License](#license)
 
-This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.26.
+This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0.
 
 
-It's (not so) ugly right now, but it's up: [take a look](http://www.weo3.com/ng-bla)
+It's (not so) ugly right now, but it's up: [take a look](http://www.weo3.com/bowleague)
 
 # Intro
 
-`ng-bla` is a casual bowling league app for league, team, and player tracking.
+`bowleague` is a casual bowling league app for league, team, and player tracking.
 
 This app is the culmination of too many lost games over a few missed pins. And, to be honest, quite a lot of beer. Bowling app market is lacking in a easy to use, mobile friendly, accessible fun *league* app for casual league play.
 
@@ -95,17 +95,17 @@ _Does not rely on any global dependencies._
 - move the goals listed here for each section to official Roadmap in documentation
 
 ### Stack
-- Angular 2 on up, using angular-seed which implemented angular-cli as a guide
+- modern Angular, using angular-cli to start seed
 - php RESTful API, using [Slim Framework](https://www.slimframework.com/)
 - MySQL, because who doesn't love a good left join??
-- combined (for now) use of [Zurb's Foundation 6](http://foundation.zurb.com/) and [Material Design 2 for Angular](https://github.com/angular/material2) for layout/styling
-- git - to save our souls when we are so very human and press delete at the wrong time
+- **some** [MaterialDesign 2 for Angular](https://github.com/angular/material2) for layout/styling
+- git - to save our souls when we are so very human and confirm delete at the wrong time
 
 
 # Notes
 - this will evolve to exist as a **production-level** ready app. Testing, compliance, and best practices will be included
-- will remain as a live example of different *evolving* areas of Angular - January 2017 should be fun!
-- this app will remain in beta until at least end of Q1 2017
+- will remain as a live example of different *evolving* areas of Angular - 2017 has been fun so far!
+- this app will remain in beta/rc until at least end of Q2 2017
 
 
 ### Landing Page (home)

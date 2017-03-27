@@ -1,10 +1,10 @@
-import { TestcasePage } from './app.po';
+import { BowleaguePage } from './app.po';
 
-describe('testcase App', function() {
-  let page: TestcasePage;
+describe('bowleague App', () => {
+  let page: BowleaguePage;
 
   beforeEach(() => {
-    page = new TestcasePage();
+    page = new BowleaguePage();
   });
 
   it('should display message saying app works', () => {

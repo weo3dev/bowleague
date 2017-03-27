@@ -12,7 +12,7 @@ import 'rxjs/add/operator/catch';
 @Injectable()
 export class TeamsService {
 
-  private apiUrl: string = '/ng-bla/api/teams';
+  private apiUrl: string = '/bowleague/api/teams';
 
   constructor(private http: Http) {}
 

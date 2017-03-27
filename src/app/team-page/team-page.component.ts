@@ -35,9 +35,24 @@ export class TeampageComponent implements OnInit {
   gradient = false;
   showLegend = true;
   showXAxisLabel = true;
+
   xAxisLabel = 'Country';
   showYAxisLabel = true;
-  yAxisLabel = 'Population'; 
+  yAxisLabel = 'Population';
+
+  fitContainer: boolean = true;
+
+  //line interpolation
+  // curveType: string = 'Linear';
+  // curve: any = shape.curveLinear;
+  // interpolationTypes = [
+  //   'Basis', 'Bundle', 'Cardinal', 'Catmull Rom', 'Linear', 'Monotone X',
+  //   'Monotone Y', 'Natural', 'Step', 'Step After', 'Step Before'
+  // ];
+
+  // line, area
+  autoScale = true;
+  timeline = false;
 
   colorScheme = {
     domain: ['#5AA454', '#A10A28', '#C7B42C', '#336699']
@@ -71,7 +86,7 @@ single = [
     private winRef: WindowRef
   ) {
 
-    Object.assign(this, this.single );
+    //Object.assign(this, this.single );
 
     this.chartWidth = winRef.nativeWindow.innerWidth * .8;
     this.chartHeight = winRef.nativeWindow.innerHeight * .5;
@@ -79,7 +94,7 @@ single = [
 
   ngOnInit() {
 
-    //Object.assign(this, this.chartData);
+    Object.assign(this, this.chartData);
 
     this.view = [this.chartWidth, this.chartHeight];
 

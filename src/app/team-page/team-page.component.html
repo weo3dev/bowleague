@@ -1,6 +1,6 @@
 <h3>teampage</h3>
 
- <ngx-charts-bar-vertical
+<!--  <ngx-charts-bar-vertical
       [view]="view"
       [scheme]="colorScheme"
       [results]="single"
@@ -13,7 +13,23 @@
       [xAxisLabel]="xAxisLabel"
       [yAxisLabel]="yAxisLabel"
       (select)="onSelect($event)">
-</ngx-charts-bar-vertical>
+</ngx-charts-bar-vertical> -->
+
+<ngx-charts-line-chart
+      [view]="view"
+      [scheme]="colorScheme"
+      [results]="multi"
+      [gradient]="gradient"
+      [xAxis]="showXAxis"
+      [yAxis]="showYAxis"
+      [legend]="showLegend"
+      [showXAxisLabel]="showXAxisLabel"
+      [showYAxisLabel]="showYAxisLabel"
+      [xAxisLabel]="xAxisLabel"
+      [yAxisLabel]="yAxisLabel"
+      
+      (select)="onSelect($event)">
+</ngx-charts-line-chart>
 
 <div class="content-centered" *ngIf="!team">no data. yet.</div>
 

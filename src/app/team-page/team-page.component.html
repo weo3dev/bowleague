@@ -1,4 +1,7 @@
-<h3>teampage</h3>
+
+<h3 class="header-team">[[ teamname here ]]</h3>
+
+
 
 <ngx-charts-line-chart
       [view]="view"
@@ -12,7 +15,6 @@
       [showYAxisLabel]="showYAxisLabel"
       [xAxisLabel]="xAxisLabel"
       [yAxisLabel]="yAxisLabel"
-      [fitContainer]="fitContainer"
       [autoScale]="autoScale"
       [tooltipDisabled]="tooltipDisabled"      
       (select)="onSelect($event)">
@@ -21,7 +23,17 @@
 <div class="content-centered" *ngIf="!team">no data. yet.</div>
 
 <div *ngIf="team" style="padding: 2rem;">
- 	<div *ngFor="let t of team">
- 		<p>{{ t.name }}, {{ t.id}} </p>
+ 	<div *ngFor="let player of team">
+            <img src="assets/avatars/avatar-{{player.id}}.svg">
+            <div class="card-section" (click)="showPlayer(player)">
+              <h3>{{ player.pname }}</h3>
+              <p>{{ player.tpins }}</p>
+            </div>
  	</div>
 </div>
+
+
+<!-- <p>{{ player.pname }}, {{ player.gms}}, {{ player.tpins }}, {{ player.avgs }}, {{ player.hnd }} </p> -->
+<!-- "tname":"Guttermouths","pid":33,"pname":"Burke X","tpins":3502,"gms":24,"avgs":146,"hnd":51 -->
+
+

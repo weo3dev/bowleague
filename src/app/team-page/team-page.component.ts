@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import { Team } from '../shared/models/team';
+import { Player } from '../shared/models/player';
+
 import { TeamsService } from '../shared/services/teams.service';
 
 import { WindowRef } from '../WindowRef';
@@ -15,6 +17,7 @@ import 'rxjs/add/operator/switchMap';
 export class TeampageComponent implements OnInit {
   
   errorMessage: string;
+  teamID: number;
   team: Team;  
 
   chartType = 'bar-vertical';
@@ -51,7 +54,6 @@ export class TeampageComponent implements OnInit {
   ];
 
   // options
-  //single: any[];
   view: any[];
 
   // options
@@ -63,12 +65,11 @@ export class TeampageComponent implements OnInit {
   xAxisLabel = 'xAxis';
   showYAxisLabel = false;
   yAxisLabel = 'yAxis';
-  showToolTip = false;
-  fitContainer = true;
+  tooltipDisabled = true;
   autoScale = true;
 
 
-  // small detail for color scheme, match the teams color(s)
+  // future addition for color scheme: match the teams color(s) 
   colorScheme = {
     domain: ['#5AA454', '#A10A28', '#C7B42C', '#336699']
   }; 
@@ -80,21 +81,22 @@ export class TeampageComponent implements OnInit {
     private winRef: WindowRef
   ) {
 
-    //Object.assign(this, this.single );
+    this.teamID = this.route.snapshot.params['id'];
 
     this.chartWidth = winRef.nativeWindow.innerWidth * .8;
     this.chartHeight = winRef.nativeWindow.innerHeight * .5;
   }
 
   ngOnInit() {
+    this.getTeam(this.teamID);
     Object.assign(this, this.chartData);
     this.view = [this.chartWidth, this.chartHeight];
   }
 
 /* temp name; orig was ngOnInit */
-  getAllDaTeams() {
+  getTeam(tid) {
     this.route.params
-      .switchMap((params: Params) => this.service.getTeam(+params['id']))
+      .switchMap((params: Params) => this.service.getTeam(tid))
       .subscribe((team: Team) => this.team = team);
   }
 

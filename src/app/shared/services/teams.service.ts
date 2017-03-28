@@ -27,10 +27,10 @@ export class TeamsService {
 
   getTeam(id: any): Observable<Team> {
     return this.http.get(`${this.apiUrl}/${id}`)
-    .map(res => res.json())
-    .map(team => team.map(this.toTeam))
+    .map(team => team.json())
+    //.map(team => team.map(this.toTeam))
     .catch(this.handleError);
-  }
+  } 
 
   /* reformat the data to fit Team model */
   private toTeam(team:any): Team {

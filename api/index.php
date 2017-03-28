@@ -38,16 +38,26 @@ $app->get('/standings', function ($request, $response) {
 $app->get('/teams', function ($request, $response) {
 	$mapper = new TeamsMap($this->db);
 	$teams = $mapper->getTeams();
-	$newResponse = $response->withJson($teams, 201);
+	// $cleanResponse = $response->withJson($teams, 201);
 	return $teams;
 });
+
+// $app->get('/teams/{id}', function ($request, $response, $args) {
+// 	$team_id = (int)$args['id'];
+// 	$mapper = new TeamsMap($this->db);
+// 	$team = $mapper->getTeam($team_id);
+// 	return $team;
+// });
 
 $app->get('/teams/{id}', function ($request, $response, $args) {
 	$team_id = (int)$args['id'];
 	$mapper = new TeamsMap($this->db);
-	$team = $mapper->getTeam($team_id);
+	$team = $mapper->getFullTeam($team_id);
 	return $team;
 });
+
+
+
 
 $app->get('/players', function ($request, $response) {
 	$mapper = new PlayersMap($this->db);

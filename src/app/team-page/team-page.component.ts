@@ -3,8 +3,6 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 import { Team } from '../shared/models/team';
 import { TeamsService } from '../shared/services/teams.service';
 
-import { BaseChartComponent, ColorHelper } from '@swimlane/ngx-charts';
-
 import { WindowRef } from '../WindowRef';
 
 import 'rxjs/add/operator/switchMap';
@@ -23,7 +21,34 @@ export class TeampageComponent implements OnInit {
   chart: any;
   chartWidth:number;
   chartHeight:number;
-  chartData: any[];
+
+  chartData = [
+    {
+      "name": "weekly scores",
+      "series": [
+        {
+          "value": 2154,
+          "name": "week 1"
+        },
+        {
+          "value": 2808,
+          "name": "week 2"
+        },
+        {
+          "value": 2918,
+          "name": "week 3"
+        },
+        {
+          "value": 3276,
+          "name": "week 4"
+        },
+        {
+          "value": 2470,
+          "name": "week 5"
+        }
+      ]
+    }
+  ];
 
   // options
   //single: any[];
@@ -33,51 +58,20 @@ export class TeampageComponent implements OnInit {
   showXAxis = true;
   showYAxis = true;
   gradient = false;
-  showLegend = true;
-  showXAxisLabel = true;
-
-  xAxisLabel = 'Country';
-  showYAxisLabel = true;
-  yAxisLabel = 'Population';
-
-  fitContainer: boolean = true;
-
-  //line interpolation
-  // curveType: string = 'Linear';
-  // curve: any = shape.curveLinear;
-  // interpolationTypes = [
-  //   'Basis', 'Bundle', 'Cardinal', 'Catmull Rom', 'Linear', 'Monotone X',
-  //   'Monotone Y', 'Natural', 'Step', 'Step After', 'Step Before'
-  // ];
-
-  // line, area
+  showLegend = false;
+  showXAxisLabel = false;
+  xAxisLabel = 'xAxis';
+  showYAxisLabel = false;
+  yAxisLabel = 'yAxis';
+  showToolTip = false;
+  fitContainer = true;
   autoScale = true;
-  timeline = false;
 
+
+  // small detail for color scheme, match the teams color(s)
   colorScheme = {
     domain: ['#5AA454', '#A10A28', '#C7B42C', '#336699']
-  };
-
-
-single = [
-  {
-    "name": "Germany",
-    "value": 8940
-  },
-  {
-    "name": "USA",
-    "value": 5000
-  },
-  {
-    "name": "France",
-    "value": 7200
-  },
-  {
-    "name": "Canada",
-    "value": 3500
-  }
-
-];  
+  }; 
 
   constructor(
     private route: ActivatedRoute,
@@ -93,28 +87,8 @@ single = [
   }
 
   ngOnInit() {
-
     Object.assign(this, this.chartData);
-
     this.view = [this.chartWidth, this.chartHeight];
-
-    // give everything a chance to get loaded before starting the animation to reduce choppiness
-    setTimeout(() => {
-      this.generateData();
-
-      // change the data periodically
-      setInterval(() => this.generateData(), 3000);
-    }, 1000);
-  }
-
-  generateData() {
-    this.chartData = [];
-    for (let i = 0; i < (8 + Math.floor(Math.random() * 6)); i++) {
-      this.chartData.push([
-        `Index ${i}`,
-        Math.floor(Math.random() * 100)
-      ]);
-    }
   }
 
 /* temp name; orig was ngOnInit */

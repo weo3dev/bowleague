@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import {Router, NavigationEnd } from '@angular/router';
+
+declare let ga: Function;
 
 @Component({
   selector: 'app-root',
@@ -6,5 +9,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app is here';
+  constructor(public router: Router) {
+  	/* implement autoscroll to top, on new route */
+  	router.events.subscribe((val) => {
+  		if (val instanceof NavigationEnd) {
+  			window.scrollTo(0,0);
+        ga('set', 'page', val.urlAfterRedirects);
+        ga('send', 'pageview');
+  		}
+  	});
+  }
 }

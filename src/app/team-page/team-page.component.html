@@ -1,8 +1,6 @@
 
 <h3 class="header-team">[[ maybe teamname here? ]]</h3>
 
-
-
 <ngx-charts-line-chart
       [view]="view"
       [scheme]="colorScheme"
@@ -20,7 +18,7 @@
       (select)="onSelect($event)">
 </ngx-charts-line-chart>
 
-<div class="content-centered" *ngIf="!team">no data. yet.</div>
+
 
 <div *ngIf="team" style="padding: 2rem;">
  	<div *ngFor="let player of team">

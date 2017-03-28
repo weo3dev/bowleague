@@ -1,35 +1,37 @@
-<div class="table-view">
-    <table class="table-standings unstriped">
-        <caption>Current League Standings</caption>
-        <thead>
-            <tr>
-                <th class="wlp"></th>
-                <th class="teamname">Name</th>
-                <th class="wlp">W</th>
-                <th class="wlp">L</th>
-                <th class="wlp">Pct</th>
-                <th>Pins</th>
-            </tr>
-        </thead>
-        <tbody *ngIf="standings" class="table-players-list">
+<section>
+    <div class="table-view">
+        <table class="table-standings unstriped">
+            <caption>Current League Standings</caption>
+            <thead>
+                <tr>
+                    <th class="wlp"></th>
+                    <th class="teamname">Name</th>
+                    <th class="wlp">W</th>
+                    <th class="wlp">L</th>
+                    <th class="wlp">Pct</th>
+                    <th>Pins</th>
+                </tr>
+            </thead>
+            <tbody *ngIf="standings" class="table-players-list">
 
-<!--  tr *ngFor="let place of standings; let i = index" -->
+    <!--  tr *ngFor="let place of standings; let i = index" -->
 
-            <tr *ngFor="let place of standings; let i=index">
-                <td class="wlp">{{i + 1}}</td>
-                <td class="teamname">{{place.tname}}</td>
-                <td class="wlp">{{place.wins}}</td>
-                <td class="wlp">{{place.loss}}</td>
-                <td class="wlp">{{place.pcnt}}</td>
-                <td>{{place.tpins}}</td>
-            </tr>
-        </tbody>
-        <tbody *ngIf="!standings">
-            <tr>
-                <td colspan="6"><img src="assets/svg/balls.svg"></td>
-            </tr>
-        </tbody>
-    </table>
-</div>
+                <tr *ngFor="let place of standings; let i=index">
+                    <td class="wlp">{{i + 1}}</td>
+                    <td class="teamname">{{place.tname}}</td>
+                    <td class="wlp">{{place.wins}}</td>
+                    <td class="wlp">{{place.loss}}</td>
+                    <td class="wlp">{{place.pcnt}}</td>
+                    <td>{{place.tpins}}</td>
+                </tr>
+            </tbody>
+            <tbody *ngIf="!standings">
+                <tr>
+                    <td colspan="6"><img src="assets/svg/balls.svg"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
 
 

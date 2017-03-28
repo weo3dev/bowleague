@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import {Router, NavigationEnd } from '@angular/router';
 
-declare let ga: Function;
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -14,8 +12,6 @@ export class AppComponent {
   	router.events.subscribe((val) => {
   		if (val instanceof NavigationEnd) {
   			window.scrollTo(0,0);
-        ga('set', 'page', val.urlAfterRedirects);
-        ga('send', 'pageview');
   		}
   	});
   }

@@ -1,8 +1,6 @@
 import { ModuleWithProviders }			from '@angular/core';
 import { Routes, RouterModule }			from '@angular/router';
 
-import { NavigationComponent } 		  from './shared/navigation/navigation.component';
-
 import { HomeComponent }						from './home/home.component';
 import { LeadersComponent }					from './leaders/leaders.component';
 import { TeamsComponent }						from './teams/teams.component';

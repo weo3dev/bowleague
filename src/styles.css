@@ -1,37 +1,131 @@
-/* You can add global styles to this file, and also import other style files */
-
 @import "foundation.min.css";
+
+/*****************************************
+
+weo3 dev & design :: revised 03.28.17 
+
+1. Elements
+2. Material Design amendments
+3. General
+4. Media Queries
+
+*****************************************/
+
+html, body {
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    /*font-family: 'Assistant', sans-serif;*/
+    color: #565656;
+}
+
+body {
+    background-color: #FAFAFA;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    font-variant: small-caps;
+    position: fixed;
+    z-index: 200;
+    top: 0;
+    width: 100vw;
+    height: 3em;
+    color: #FFF;
+    background: #F27D0C;
+    border-bottom: 3px solid #d60;    
+    box-shadow: 0 0 3px rgba(51,102,153,1);
+}
+
+    header img {
+        height: 2.5em;
+        width: 2.5em;
+        margin: auto;
+    }
+
+    header p {
+        font-size: 2em;
+        padding: 0;
+        margin: 0;
+        line-height: 1;
+    }
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    z-index: 100;
+    bottom: 0;
+    background: #FFF;
+    width: 100vw;
+    height: 3em;
+    box-shadow: 0 0 4px rgba(0,0,0,0.5);
+}
+
+nav img {
+    display: none;
+}
+
+nav .mat-button {
+    flex: 1;
+    border-radius: 0;
+    line-height: 1;
+    background: transparent;
+}
+
+    nav .mat-button, nav .mat-button:visited {
+        color: #565656;
+    }
+
+    nav .mat-button.active {
+        background: #F27D0C;
+    }
+
+    .mat-button md-icon, .mat-button .caption {
+        color: #565656;
+    }
+
+    .mat-button.active md-icon, .mat-button.active .caption {
+        color: #FFF;
+    }
+
+    .mat-button .caption {
+        font-variant: small-caps;
+        font-weight: 400;
+    }
+
+    /* temporary fix to a bug */
+
+    .mat-button-focus-overlay, .mat-button-ripple {
+        z-index: -1;
+    }
+
+    .mat-button-focus-overlay {
+        display: none;
+    }   
+
+section {
+    padding: 4.5em 1.25em 6em;
+    margin: 0 auto;
+}
+
+    .work {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .contact {
+        padding-bottom: 8em;
+    }
 
 img.loader-img {
     height: 100vh;
     width: 100vw;
     margin: 0 auto;
-}
-
-app-header {
-    position: fixed;
-    z-index: 10; 
-    top: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 3em;
-    width: 100vw;
-    text-align: center;
-    color: #FFF;
-    background: #F27D0C;
-    border-bottom: 3px solid #d60;
-}
-
-    app-header h1 {
-        margin: 0;
-        font-size: 2rem;
-        font-weight: 800;
-        font-variant: small-caps;
-    }
-
-.app-content {
-    margin: 5em 0 10em;
 }
 
 table {
@@ -41,5 +135,84 @@ table {
 table tbody tr+tr td {
     border-top: 1px solid #DFDFDF;
 }
+
+/*****************************************
+    Media Queries
+*****************************************/
+
+/****************************************
+    NEW APPROACH TO MEDIA QUERIES -- 
+    BREAKS AT: 37.50em (600px), 56.25em (900px), 75em (1200px), 112.50em (1800px)
+    DEFAULT 0 - 37.50em
+
+    And as always, mobile first.
+    Min-width, not max-width.
+
+    first used 2/20/2017
+****************************************/
+
+/* 600px */
+@media only screen and (min-width: 37.50em) {
+
+    .card {
+        /*max-width: calc(50% - 20px);*/
+    }   
+
+}
+
+
+/* 900px */
+@media only screen and (min-width: 56.25em) {
+
+    header {
+        display: none;
+    }
+
+    nav {
+        justify-content: initial;
+        align-content: flex-start;
+        background: #F27D0C;
+        box-shadow: 0 0 3px rgba(51,102,153,1);
+        top: 0;
+        color: #FFF;
+    }
+
+        nav img {
+            display: block;
+            height: 2.5em;
+            width: 2.5em;
+            margin: .25em 1em .25em .25em;
+        }
+
+        nav .mat-button {
+            flex: auto 0;
+        }
+
+        nav .mat-button md-icon {
+            display: none;
+        }
+
+        nav .mat-button.active {
+            box-shadow: inset 0 -4px 0 rgba(255,255,255,1);
+        }
+            nav .mat-button.active:hover {
+                cursor: default;
+            }
+
+        nav .mat-button .caption {
+            color: #FFF;
+            font-variant: small-caps;
+            font-weight: 400;
+            font-size: 1.5em;
+        }
+
+
+    section {
+        width: 65vw;
+    }
+
+}
+
+
 
 

@@ -5,6 +5,7 @@ import { HttpModule }             from '@angular/http';
 import { RouterModule }           from '@angular/router';
 
 import { MaterialModule }         from '@angular/material';
+import 'hammerjs';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgxChartsModule } from '@swimlane/ngx-charts';

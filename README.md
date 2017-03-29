@@ -18,6 +18,8 @@ This project was generated with [angular-cli](https://github.com/angular/angular
 
 It's (not so) ugly right now, but it's up: [take a look](http://www.weo3.com/bowleague)
 
+**As of the latest release of Angular (4.0), both ngx-charts and MaterialDesign yap about peer dependency, with no adverse affects**
+
 # Intro
 
 `bowleague` is a casual bowling league app for league, team, and player tracking.

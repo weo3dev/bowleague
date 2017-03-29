@@ -1,6 +1,6 @@
 {
-  "name": "angular-d3",
-  "version": "0.0.0",
+  "name": "bowleague",
+  "version": "0.0.4",
   "license": "MIT",
   "scripts": {
     "ng": "ng",

@@ -1,34 +1,43 @@
+<section>
 
-<h3 class="header-team">[[ maybe teamname here? ]]</h3>
-
-<ngx-charts-line-chart
-      [view]="view"
-      [scheme]="colorScheme"
-      [results]="chartData"
-      [gradient]="gradient"
-      [xAxis]="showXAxis"
-      [yAxis]="showYAxis"
-      [legend]="showLegend"
-      [showXAxisLabel]="showXAxisLabel"
-      [showYAxisLabel]="showYAxisLabel"
-      [xAxisLabel]="xAxisLabel"
-      [yAxisLabel]="yAxisLabel"
-      [autoScale]="autoScale"
-      [tooltipDisabled]="tooltipDisabled"      
-      (select)="onSelect($event)">
-</ngx-charts-line-chart>
+  <h3 class="header-team">[[ maybe teamname here? ]]</h3>
 
 
+  <div class="teampage-navigation">
+    <button md-button (click)="showTeam('members')">members</button>
+    <button md-button (click)="showTeam('statistics')">statistics</button>
+  </div>
 
-<div *ngIf="team" style="padding: 2rem;">
- 	<div *ngFor="let player of team">
-            <img src="assets/avatars/avatar-{{player.id}}.svg">
-            <div class="card-section" (click)="showPlayer(player)">
-              <h3>{{ player.pname }}</h3>
-              <p>{{ player.tpins }}</p>
-            </div>
- 	</div>
-</div>
+  <ngx-charts-line-chart
+        [view]="view"
+        [scheme]="colorScheme"
+        [results]="chartData"
+        [gradient]="gradient"
+        [xAxis]="showXAxis"
+        [yAxis]="showYAxis"
+        [legend]="showLegend"
+        [showXAxisLabel]="showXAxisLabel"
+        [showYAxisLabel]="showYAxisLabel"
+        [xAxisLabel]="xAxisLabel"
+        [yAxisLabel]="yAxisLabel"
+        [autoScale]="autoScale"
+        [tooltipDisabled]="tooltipDisabled"
+        (select)="onSelect($event)">
+  </ngx-charts-line-chart>
+
+
+
+  <div *ngIf="team" style="padding: 2rem;">
+   	<div *ngFor="let player of team">
+              <img src="assets/avatars/avatar-{{player.id}}.svg">
+              <div class="card-section" (click)="showPlayer(player)">
+                <h3>{{ player.pname }}</h3>
+                <p>{{ player.tpins }}</p>
+              </div>
+   	</div>
+  </div>
+
+</section>
 
 
 <!-- <p>{{ player.pname }}, {{ player.gms}}, {{ player.tpins }}, {{ player.avgs }}, {{ player.hnd }} </p> -->

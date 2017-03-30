@@ -111,16 +111,6 @@ section {
     margin: 0 auto;
 }
 
-    .work {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        flex-wrap: wrap;
-    }
-
-    .contact {
-        padding-bottom: 8em;
-    }
 
 img.loader-img {
     height: 100vh;

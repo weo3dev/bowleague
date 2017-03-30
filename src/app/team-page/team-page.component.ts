@@ -83,6 +83,7 @@ export class TeampageComponent implements OnInit {
 
     this.teamID = this.route.snapshot.params['id'];
 
+    // need to re-think this approach. Not exactly correct for all cases.
     this.chartWidth = winRef.nativeWindow.innerWidth * .8;
     this.chartHeight = winRef.nativeWindow.innerHeight * .5;
   }
@@ -98,6 +99,10 @@ export class TeampageComponent implements OnInit {
     this.route.params
       .switchMap((params: Params) => this.service.getTeam(tid))
       .subscribe((team: Team) => this.team = team);
+  }
+
+  showTeam(which:string) {
+    console.log('showing', which);
   }
 
   onSelect(event:any) {

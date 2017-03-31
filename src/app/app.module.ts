@@ -19,13 +19,14 @@ import { PlayersComponent }       from './players/players.component';
 
 
 const ROUTES = [
-  { path: '', component: HomeComponent },
-  { path: 'teams', component: TeamsComponent },
-  { path: 'teams/:id', component: TeampageComponent },
-  { path: 'leaders', component: LeadersComponent },
-  { path: 'players', component: PlayersComponent },
+  { path: '', component: HomeComponent, data: { title: 'Bowl League' } },
+  { path: 'teams', component: TeamsComponent, data: { title: 'Teams' } },
+  { path: 'teams/:id', component: TeampageComponent, data: { title: '' } },
+  { path: 'leaders', component: LeadersComponent, data: { title: 'Leaderboard' } },
+  { path: 'players', component: PlayersComponent, data: { title: 'Players' } },
   { path: '**', redirectTo: 'home' }  
 ];
+
 
 @NgModule({
   imports: [
@@ -54,3 +55,4 @@ const ROUTES = [
   ]
 })
 export class AppModule { }
+

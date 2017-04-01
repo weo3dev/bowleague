@@ -15,9 +15,9 @@ app-tab {
   text-align: center;
   color: #FFF;
   font-size: 1rem;
-  padding: 1rem 0;
   line-height: 1;
   font-weight: 600;
+  margin-bottom: 2rem;
   background-color: rgba(242,125,12,0.25);
 }
 

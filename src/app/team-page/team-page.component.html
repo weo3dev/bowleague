@@ -1,40 +1,49 @@
 <section>
 
-  <h3 class="header-team">[[ maybe teamname here? ]]</h3>
-
-
-  <div class="teampage-navigation">
-    <button md-button (click)="showTeam('members')">members</button>
-    <button md-button (click)="showTeam('statistics')">statistics</button>
+  <div *ngIf="team">
+    <h3 class="header-team" *ngFor="let t of team | slice:1:2">{{ t.tname }}</h3>
   </div>
 
-  <ngx-charts-line-chart
-        [view]="view"
-        [scheme]="colorScheme"
-        [results]="chartData"
-        [gradient]="gradient"
-        [xAxis]="showXAxis"
-        [yAxis]="showYAxis"
-        [legend]="showLegend"
-        [showXAxisLabel]="showXAxisLabel"
-        [showYAxisLabel]="showYAxisLabel"
-        [xAxisLabel]="xAxisLabel"
-        [yAxisLabel]="yAxisLabel"
-        [autoScale]="autoScale"
-        [tooltipDisabled]="tooltipDisabled"
-        (select)="onSelect($event)">
-  </ngx-charts-line-chart>
+  <div class="tabs-selection">
+    <app-tab md-button [active]="isSelected(1)" (click)="setTab(1)">members</app-tab>
+    <app-tab md-button [active]="isSelected(2)" (click)="setTab(2)">stats</app-tab>
+  </div>
 
+  <div [ngSwitch]="tab">
 
+    <app-tab-content *ngSwitchCase="1">
+      <div *ngIf="team" class="row small-up-3 medium-up-4 large-up-5">
+        <div class="column" *ngFor="let player of team">
+          <div class="card">
+            <img src="assets/avatars/avatar-{{player.pid}}.svg">
+            <div class="card-section" (click)="showPlayer(player)">
+              <h3>{{ player.pname }}</h3>
+              <p>{{ player.tpins }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </app-tab-content>
 
-  <div *ngIf="team" style="padding: 2rem;">
-   	<div *ngFor="let player of team">
-              <img src="assets/avatars/avatar-{{player.id}}.svg">
-              <div class="card-section" (click)="showPlayer(player)">
-                <h3>{{ player.pname }}</h3>
-                <p>{{ player.tpins }}</p>
-              </div>
-   	</div>
+    <app-tab-content *ngSwitchCase="2">
+        << still under development; lots more data to bring in >>
+      <ngx-charts-line-chart
+            [scheme]="colorScheme"
+            [results]="chartData"
+            [gradient]="gradient"
+            [xAxis]="showXAxis"
+            [yAxis]="showYAxis"
+            [legend]="showLegend"
+            [showXAxisLabel]="showXAxisLabel"
+            [showYAxisLabel]="showYAxisLabel"
+            [xAxisLabel]="xAxisLabel"
+            [yAxisLabel]="yAxisLabel"
+            [autoScale]="autoScale"
+            [tooltipDisabled]="tooltipDisabled"
+            (select)="onSelect($event)">
+      </ngx-charts-line-chart>
+    </app-tab-content>
+
   </div>
 
 </section>

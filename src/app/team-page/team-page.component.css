@@ -1,3 +1,103 @@
 ngx-charts-line-chart {
 	width: inherit;
 }
+
+.tabs-selection {
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: row;
+    justify-content: center;
+}
+
+app-tab {
+  flex: 1;
+  text-transform: uppercase;
+  text-align: center;
+  color: #FFF;
+  font-size: 1rem;
+  line-height: 1;
+  font-weight: 600;
+  background: transparent;
+  border-top: 1px solid #F90;
+  border-bottom: 1px solid #F90;
+}
+
+.wrapper {
+  background-color: transparent;
+}
+
+.active {
+  background-color: #F90;
+}
+
+app-tab-content {
+  border: none;
+  border-top: 0;
+  margin-bottom: 0;
+  display: block;
+  padding: 0;
+}
+
+.card {
+  border-radius: 0.2em;
+  position: relative;
+  border: 1px solid #676767;  
+}
+
+  .card img {
+    padding: 1rem 0 2rem;
+  }
+
+  p {
+    margin-bottom: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1;
+    text-rendering: optimizeLegibility;
+  }
+
+.card-section {
+  padding: .45rem;
+  background: #676767;
+  color: #EFEFEF;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  line-height: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+  .card-section h3 {
+    line-height: 1;
+    margin: 0;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+
+
+
+
+
+
+
+
+  @media screen and (min-width: 40em) {
+  
+  /* medium on up */
+  .card-section p {
+    font-size: 0.5rem;
+    line-height: 1;
+  }
+
+  .card-section h3 {
+    line-height: 1;
+    margin: 0;
+    font-size: 0.7rem;
+  }  
+
+
+}
+
+

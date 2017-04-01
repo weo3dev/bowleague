@@ -17,11 +17,14 @@ import { LeadersComponent }       from './leaders/leaders.component';
 import { TeampageComponent }      from './team-page/team-page.component';
 import { PlayersComponent }       from './players/players.component';
 
+import { TabComponent }  from './tab.component';
+import { TabContentComponent }  from './tab-content.component';
+
 
 const ROUTES = [
   { path: '', component: HomeComponent, data: { title: 'Bowl League' } },
   { path: 'teams', component: TeamsComponent, data: { title: 'Teams' } },
-  { path: 'teams/:id', component: TeampageComponent, data: { title: '' } },
+  { path: 'teams/:id', component: TeampageComponent, data: { title: 'Teams' } },
   { path: 'leaders', component: LeadersComponent, data: { title: 'Leaderboard' } },
   { path: 'players', component: PlayersComponent, data: { title: 'Players' } },
   { path: '**', redirectTo: 'home' }  
@@ -45,7 +48,9 @@ const ROUTES = [
     TeamsComponent,
     LeadersComponent,
     TeampageComponent,
-    PlayersComponent
+    PlayersComponent,
+    TabComponent,
+    TabContentComponent
   ],
   exports: [
     MaterialModule

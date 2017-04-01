@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import { Team } from '../shared/models/team';
 import { Player } from '../shared/models/player';
@@ -22,8 +22,8 @@ export class TeampageComponent implements OnInit {
 
   chartType = 'bar-vertical';
   chart: any;
-  chartWidth:number;
-  chartHeight:number;
+  // chartWidth:number;
+  // chartHeight:number;
 
   chartData = [
     {
@@ -84,14 +84,24 @@ export class TeampageComponent implements OnInit {
     this.teamID = this.route.snapshot.params['id'];
 
     // need to re-think this approach. Not exactly correct for all cases.
-    this.chartWidth = winRef.nativeWindow.innerWidth * .8;
-    this.chartHeight = winRef.nativeWindow.innerHeight * .5;
+    // this.chartWidth = winRef.nativeWindow.innerWidth * .8;
+    // this.chartHeight = winRef.nativeWindow.innerHeight * .5;
+  }
+
+  tab: number = 1;
+
+  setTab(num: number) {
+  this.tab = num;
+  }
+
+  isSelected(num: number) {
+  return this.tab === num;
   }
 
   ngOnInit() {
     this.getTeam(this.teamID);
     Object.assign(this, this.chartData);
-    this.view = [this.chartWidth, this.chartHeight];
+    // this.view = [this.chartWidth, this.chartHeight];
   }
 
 /* temp name; orig was ngOnInit */

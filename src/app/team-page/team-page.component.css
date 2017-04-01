@@ -21,10 +21,17 @@ app-tab {
   background-color: rgba(242,125,12,0.25);
 }
 
-app-tab .active {
+.active {
   background-color: rgba(242,125,12,1);
 }
 
+div.active {
+  background-color: rgba(242,125,12,1);
+}
+
+.wrapper.active {
+  background-color: rgba(242,125,12,1);  
+}
 
 app-tab-content {
   border: none;

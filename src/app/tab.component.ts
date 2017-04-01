@@ -13,7 +13,11 @@ import { Component, Input } from '@angular/core';
       cursor: pointer;
       user-select: none;
     }
+    .active {
+      background-color: rgba(242,125,12,1);
+    }
     .unselectable {
+      padding: 1rem;
         -webkit-touch-callout: none;
         -webkit-user-select: none;
         -khtml-user-select: none;

@@ -107,7 +107,7 @@ nav .mat-button {
     }   
 
 section {
-    padding: 4.5em 1.25em 6em;
+    padding: 4.5em .25em 6em;
     margin: 0 auto;
 }
 
@@ -198,6 +198,7 @@ table tbody tr+tr td {
 
 
     section {
+        padding: 4.25em 0 6em;
         width: 65vw;
     }
 

@@ -5,8 +5,8 @@
   </div>
 
   <div class="tabs-selection">
-    <app-tab md-button [active]="isSelected(1)" (click)="setTab(1)">members</app-tab>
-    <app-tab md-button [active]="isSelected(2)" (click)="setTab(2)">stats</app-tab>
+    <app-tab [active]="isSelected(1)" (click)="setTab(1)">members</app-tab>
+    <app-tab [active]="isSelected(2)" (click)="setTab(2)">stats</app-tab>
   </div>
 
   <div [ngSwitch]="tab">

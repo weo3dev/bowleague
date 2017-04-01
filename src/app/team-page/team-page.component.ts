@@ -23,7 +23,7 @@ export class TeampageComponent implements OnInit {
   chartType = 'bar-vertical';
   chart: any;
   // chartWidth:number;
-  // chartHeight:number;
+  chartHeight:number;
 
   chartData = [
     {
@@ -85,7 +85,7 @@ export class TeampageComponent implements OnInit {
 
     // need to re-think this approach. Not exactly correct for all cases.
     // this.chartWidth = winRef.nativeWindow.innerWidth * .8;
-    // this.chartHeight = winRef.nativeWindow.innerHeight * .5;
+    this.chartHeight = 500;
   }
 
   tab: number = 1;

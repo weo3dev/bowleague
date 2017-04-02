@@ -7,15 +7,19 @@ h2 {
 }
 
 .card {
-  border-radius: 0.5em;
+  border-radius: 0.2em;
   position: relative;
   border: 1px solid #676767;  
 }
 
+  .card img {
+    padding: 1rem 0 2rem;
+  }
+
 .card-section {
-  padding: 0.25rem 0.35rem;
-  background: rgba(0,0,0,0.85);
-  color: #fff;
+  padding: .35rem;
+  background: #676767;
+  color: #EFEFEF;
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -28,22 +32,28 @@ h2 {
   .card-section h3 {
     line-height: 1;
     margin: 0;
-    font-size: 0.55rem;
+    font-size: 0.75rem;
+    font-weight: 600;
   }
 
-  .card-section p {
-    font-size: 0.5rem;
+  p {
+    margin-bottom: 0;
+    font-size: 1rem;
+    font-weight: 600;
     line-height: 1;
+    text-rendering: optimizeLegibility;
   }
+
 
 .content-centered {
   text-align: center;
 }
 
-@media screen and (min-width: 40em) {
+
+/* 900px */
+@media only screen and (min-width: 56.25em) {
   
-  /* medium on up */
-  .card-section p {
+  p {
     font-size: 0.5rem;
     line-height: 1;
   }
@@ -54,7 +64,13 @@ h2 {
     font-size: 0.7rem;
   }  
 
-
 }
+
+
+
+
+
+
+
 
 

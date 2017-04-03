@@ -12,13 +12,13 @@
   <div [ngSwitch]="tab">
 
     <app-tab-content *ngSwitchCase="1">
-      <div *ngIf="team" class="row small-up-3 medium-up-4 large-up-5">
+      <div *ngIf="team" class="row small-up-2 large-up-4">
         <div class="column" *ngFor="let player of team">
           <div class="card">
             <img src="assets/avatars/avatar-{{player.pid}}.svg">
             <div class="card-section" (click)="showPlayer(player)">
               <h3>{{ player.pname }}</h3>
-              <p>{{ player.tpins }}</p>
+              <p>Total Pins: {{ player.tpins }}</p>
             </div>
           </div>
         </div>

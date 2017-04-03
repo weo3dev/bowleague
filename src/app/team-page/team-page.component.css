@@ -51,16 +51,9 @@ app-tab-content {
     padding: 1rem 0 2rem;
   }
 
-  p {
-    margin-bottom: 0;
-    font-size: 1rem;
-    font-weight: 600;
-    line-height: 1;
-    text-rendering: optimizeLegibility;
-  }
 
 .card-section {
-  padding: .45rem;
+  padding: .5rem;
   background: #676767;
   color: #EFEFEF;
   position: absolute;
@@ -75,28 +68,18 @@ app-tab-content {
   .card-section h3 {
     line-height: 1;
     margin: 0;
-    font-size: 0.75rem;
+    font-size: 0.85rem;
     font-weight: 600;
   }
 
 
-
-
-  @media screen and (min-width: 40em) {
-  
-  /* medium on up */
   .card-section p {
-    font-size: 0.5rem;
+    margin-bottom: 0;
+    font-size: 0.65rem;
+    font-weight: 600;
     line-height: 1;
+    text-rendering: optimizeLegibility;
   }
 
-  .card-section h3 {
-    line-height: 1;
-    margin: 0;
-    font-size: 0.7rem;
-  }  
-
-
-}
 
 

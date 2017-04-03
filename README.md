@@ -16,9 +16,9 @@
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0.
 
 
-It's (not so) ugly right now, but it's up: [take a look](http://www.weo3.com/bowleague)
+[Take a look](http://www.weo3.com/bowleague)
 
-**As of the latest release of Angular (4.0), both ngx-charts and MaterialDesign yap about peer dependency, with no adverse affects**
+**As of the latest release of Angular (4.0), MaterialDesign warns about peer dependency, but with no adverse affects**
 
 # Intro
 

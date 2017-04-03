@@ -17,7 +17,7 @@ h2 {
   }
 
 .card-section {
-  padding: .35rem;
+  padding: .5rem;
   background: #676767;
   color: #EFEFEF;
   position: absolute;
@@ -38,7 +38,7 @@ h2 {
 
   p {
     margin-bottom: 0;
-    font-size: 1rem;
+    font-size: 0.65rem;
     font-weight: 600;
     line-height: 1;
     text-rendering: optimizeLegibility;

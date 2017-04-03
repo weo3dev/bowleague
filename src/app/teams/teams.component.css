@@ -1,0 +1,32 @@
+md-list {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+md-list-item {
+    flex: 1;
+    margin: 0.25rem 0.5rem;
+    min-width: 40%;
+    cursor: pointer;
+    background-color: #FFF;
+    border: 1px solid rgba(242,125,12,0.5);
+}
+
+
+md-list-item .mat-list .mat-list-item .mat-list-avatar,
+.mat-nav-list .mat-list-item .mat-list-avatar {
+	border-radius: 0;
+	height: 100%;
+	width: auto;
+}
+
+md-list-item .mat-list .mat-list-item.mat-list-item-avatar .mat-list-item-content,
+.mat-nav-list .mat-list-item.mat-list-item-avatar .mat-list-item-content {
+	padding: 0;
+}
+
+.mat-list .mat-list-item .mat-list-text,
+.mat-nav-list .mat-list-item .mat-list-text {
+
+}
+

@@ -92,22 +92,22 @@ _Does not rely on any global dependencies._
 - team members can track personal goals
 - bowling data tools available to manipulate granularly, spot weak points
 - enable league communication for announcements
-- RC by Q2 2017
-- deliver working app to my lovely DiverseyRiverBowl friends and frenemies, for use and enjoyment, by Q3 2017
+- RC by Q3 2017
+- deliver working app to my lovely DiverseyRiverBowl friends and frenemies, for use and enjoyment, by Q4 2017
 - move the goals listed here for each section to official Roadmap in documentation
 
 ### Stack
 - modern Angular, using angular-cli to start seed
 - php RESTful API, using [Slim Framework](https://www.slimframework.com/)
 - MySQL, because who doesn't love a good left join??
-- **some** [MaterialDesign 2 for Angular](https://github.com/angular/material2) for layout/styling
+- **some** [MaterialDesign 2 for Angular](https://github.com/angular/material2) for easy layout/styling
 - git - to save our souls when we are so very human and confirm delete at the wrong time
 
 
 # Notes
-- this will evolve to exist as a **production-level** ready app. Testing, compliance, and best practices will be included
+- this will evolve to exist as a *production-level* ready app. Testing, compliance, and best practices will be included
 - will remain as a live example of different *evolving* areas of Angular - 2017 has been fun so far!
-- this app will remain in beta/rc until at least end of Q2 2017
+- this app will remain in beta/rc until at least end of Q3 2017
 
 
 ### Landing Page (home)
@@ -124,18 +124,18 @@ _Does not rely on any global dependencies._
 
 - ~~Track player stats per week, per game~~ - this page more as a directory
 - ~~use HighCharts or similar to graph stats~~ - this page more as a directory
-- Responsive - *MD has yet to implement responsive as an parameter for grid-list*
+- Responsive - yes and using a newer media query approach for break points
 - player profile can be clicked to go to their page (or team page :question: [undecided])
 - per the first two above line items - sortable by player name alpha, team name alpha
 
 
 # TODO
-- make sure e2e testing working
-- integrate sample data with mockbackend for local testing
+- finish e2e test paths
+- ~~integrate sample data with mockbackend for local testing~~
 - implement travis CI
-- app-wide styling!
+- ~~app-wide styling!~~
 - tie in sub-pages (team page, profile page), to parent pages (teams, players)
-- install HighCharts
+- ~~install HighCharts~~ (installed D3 instead; more robust and using ngx-charts)
 - sass
 
 ### Players page
@@ -143,7 +143,7 @@ _Does not rely on any global dependencies._
 - alpha by name, or by team
 
 ### teams page
-- link to single team page
+- ~~link to single team page~~
 
 
 

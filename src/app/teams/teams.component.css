@@ -1,32 +1,30 @@
-md-list {
+.team-list {
 	display: flex;
 	flex-wrap: wrap;
+	flex-direction: row;
 }
 
-md-list-item {
-    flex: 1;
-    margin: 0.25rem 0.5rem;
-    min-width: 40%;
+
+.team-list-item {
+    margin: .25rem .5rem;
     cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
+    font-size: 0.9rem;
+    align-items: center;
     background-color: #FFF;
-    border: 1px solid rgba(242,125,12,0.5);
+    border: 1px solid rgba(242,125,12,.5);
+    width: calc(50% - 1rem);
 }
 
-
-md-list-item .mat-list .mat-list-item .mat-list-avatar,
-.mat-nav-list .mat-list-item .mat-list-avatar {
-	border-radius: 0;
-	height: 100%;
-	width: auto;
+.team-list-item img {
+    width: 32%;
+    height: auto;
+    margin-right: 0.75rem;
 }
 
-md-list-item .mat-list .mat-list-item.mat-list-item-avatar .mat-list-item-content,
-.mat-nav-list .mat-list-item.mat-list-item-avatar .mat-list-item-content {
-	padding: 0;
-}
-
-.mat-list .mat-list-item .mat-list-text,
-.mat-nav-list .mat-list-item .mat-list-text {
-
+.team-list-item p {
+	margin-bottom: 0;
+	line-height: 1;
 }
 

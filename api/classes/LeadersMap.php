@@ -4,6 +4,7 @@ class LeadersMap extends Mapper {
 
 	public function getLeaders($player, $category, $handicap) {
 
+		// $team valid = t(eam)
 		// $player valid = m(ale), f(emale), t(eam)
 		// $category valid = g(ame), s(eries)
 		// $handicap valid = y(es), n(o)

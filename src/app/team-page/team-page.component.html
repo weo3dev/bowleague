@@ -26,7 +26,6 @@
     </app-tab-content>
 
     <app-tab-content *ngSwitchCase="2">
-        << still under development; lots more data to bring in >>
       <ngx-charts-line-chart
             [scheme]="colorScheme"
             [results]="chartData"
@@ -42,6 +41,9 @@
             [tooltipDisabled]="tooltipDisabled"
             (select)="onSelect($event)">
       </ngx-charts-line-chart>
+
+      <p>still under development; lots more data to bring in</p>
+
     </app-tab-content>
 
   </div>

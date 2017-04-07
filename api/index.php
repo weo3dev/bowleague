@@ -57,8 +57,6 @@ $app->get('/teams/{id}', function ($request, $response, $args) {
 });
 
 
-
-
 $app->get('/players', function ($request, $response) {
 	$mapper = new PlayersMap($this->db);
 	$players = $mapper->getPlayers();

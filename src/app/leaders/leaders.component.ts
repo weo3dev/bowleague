@@ -11,7 +11,11 @@ import { WomensGameHandicapService } from '../shared/services/womens-game-handic
 import { WomensSeriesScratchService } from '../shared/services/womens-series-scratch.service';
 import { WomensSeriesHandicapService } from '../shared/services/womens-series-handicap.service';
 
+import { TeamSeriesScratchService } from '../shared/services/team-series-scratch.service';
+import { TeamSeriesHandicapService } from '../shared/services/team-series-handicap.service';
+
 import { Player } from '../shared/models/Player';
+import { Team } from '../shared/models/Team';
 
 
 @Component({
@@ -25,7 +29,9 @@ import { Player } from '../shared/models/Player';
     WomensGameHandicapService,
     WomensGameScratchService,
     WomensSeriesHandicapService,
-    WomensSeriesScratchService
+    WomensSeriesScratchService,
+    TeamSeriesScratchService,
+    TeamSeriesHandicapService
   ]
 })
 export class LeadersComponent implements OnInit {
@@ -43,7 +49,10 @@ export class LeadersComponent implements OnInit {
     womensSeriesScratch: Player[];
     womensSeriesHandicap: Player[];
 
-    mode = 'Observable';
+    teamSeriesScratch: Team[];
+    teamSeriesHandicap: Team[];
+
+    //mode = 'Observable';
 
     constructor (
       private mgsService: MensGameScratchService,
@@ -53,7 +62,9 @@ export class LeadersComponent implements OnInit {
       private wgsService: WomensGameScratchService,
       private wghService: WomensGameHandicapService,
       private wssService: WomensSeriesScratchService,
-      private wshService: WomensSeriesHandicapService
+      private wshService: WomensSeriesHandicapService,
+      private tssService: TeamSeriesScratchService,
+      private tshService: TeamSeriesHandicapService
 
     ) {}
 
@@ -66,6 +77,8 @@ export class LeadersComponent implements OnInit {
       this.getWomensGameHandicap();
       this.getWomensSeriesScratch();
       this.getWomensSeriesHandicap();
+      this.getTeamSeriesScratch();
+      this.getTeamSeriesHandicap();
     }
 
     getMensGameScratch() {
@@ -106,6 +119,16 @@ export class LeadersComponent implements OnInit {
     getWomensSeriesHandicap() {
       this.wshService.getLeaders()
       .subscribe(womensSeriesHandicap => this.womensSeriesHandicap = womensSeriesHandicap, error => this.errorMessage = <any>error);
+    }
+
+    getTeamSeriesScratch() {
+      this.tssService.getLeaders()
+      .subscribe(teamSeriesScratch => this.teamSeriesScratch = teamSeriesScratch, error => this.errorMessage = <any>error);
+    }
+
+    getTeamSeriesHandicap() {
+      this.tshService.getLeaders()
+      .subscribe(teamSeriesHandicap => this.teamSeriesHandicap = teamSeriesHandicap, error => this.errorMessage = <any>error);
     }
 
 }

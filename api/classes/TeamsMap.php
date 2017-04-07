@@ -34,6 +34,25 @@ class TeamsMap extends Mapper {
         return json_encode($results, JSON_NUMERIC_CHECK);
     }
 
+    public function getTeamPinsWeekly($team) {
+        $sql = "SELECT wid, tname, SUM(g1+g2+g3+(hnd*3)) as pins
+                FROM bnp_players
+                JOIN bnp_teams
+                ON bnp_players.tid = bnp_teams.tid
+                JOIN bnp_stats
+                ON bnp_players.pid = bnp_stats.pid
+                WHERE bnp_teams.tid = $team
+                GROUP BY bnp_teams.tid, wid"
+
+        $stmt = $this->db->query($sql);
+
+        $results = [];
+        while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+            $results[] = $row;
+        }
+        return json_encode($results, JSON_NUMERIC_CHECK);
+    }
+
 }
 
 ?>

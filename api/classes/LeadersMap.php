@@ -4,7 +4,6 @@ class LeadersMap extends Mapper {
 
 	public function getLeaders($player, $category, $handicap) {
 
-		// $team valid = t(eam)
 		// $player valid = m(ale), f(emale), t(eam)
 		// $category valid = g(ame), s(eries)
 		// $handicap valid = y(es), n(o)
@@ -118,11 +117,48 @@ class LeadersMap extends Mapper {
 		if($player === 't') {
 
 			// stats for teams
+			
+			if($category === 'g') {
+
+				if($handicap === 'y') {
+
+					// get top three team games, with handicap
 
 
-			// get top three teams, scratch
-			return;
+				} else {
+					// get top three team games, scratch
 
+				}
+
+			} else {
+
+				if($handicap === 'y') {
+
+					// get top three team series, with handicap
+					$sql = "SELECT tname, SUM(g1+g2+g3+(hnd*3)) as pins
+							FROM bnp_players
+							JOIN bnp_teams
+							ON bnp_players.tid = bnp_teams.tid
+							JOIN bnp_stats
+							ON bnp_players.pid = bnp_stats.pid
+							GROUP BY bnp_teams.tid, wid
+							ORDER BY pins DESC LIMIT 3";					
+
+
+				} else {
+					// get top three team series, scratch
+					$sql = "SELECT tname, SUM(g1+g2+g3) as pins
+							FROM bnp_players
+							JOIN bnp_teams
+							ON bnp_players.tid = bnp_teams.tid
+							JOIN bnp_stats
+							ON bnp_players.pid = bnp_stats.pid
+							GROUP BY bnp_teams.tid, wid
+							ORDER BY pins DESC LIMIT 3";
+
+				}
+
+			}
 		}
 
         $stmt = $this->db->query($sql);

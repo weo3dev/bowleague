@@ -5,8 +5,13 @@ table {
 }
 
 thead {
-	background: #363636;
+	background: rgba(242,125,12,0.85);
 	color: #FFF;
+}
+
+table.unstriped tbody {
+	border-left: none;
+	border-right: none;
 }
 
 th, td {
@@ -46,7 +51,7 @@ th.wlp, td.wlp {
 @media screen and (min-width: 600px) {
 	
 	table {
-		max-width: 70vw;
+		max-width: 80vw;
 		margin: 0 auto;
 	}
 

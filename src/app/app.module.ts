@@ -22,7 +22,7 @@ import { TabContentComponent }  from './tab-content.component';
 
 
 const ROUTES = [
-  { path: '', component: HomeComponent, data: { title: 'Bowl League' } },
+  { path: '', component: HomeComponent, data: { title: 'League Standings' } },
   { path: 'teams', component: TeamsComponent, data: { title: 'Teams' } },
   { path: 'teams/:id', component: TeampageComponent, data: { title: 'Teams' } },
   { path: 'leaders', component: LeadersComponent, data: { title: 'Leaderboard' } },

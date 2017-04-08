@@ -4,9 +4,43 @@
 <ul>
   <li>team scratch game</li>
   <li>team handi game</li>
-  <li>team scratch series</li>
-  <li>team handi series</li>
+  <li><s>team scratch series</s> - added apr 7th</li>
+  <li><s>team handi series</s> - added apr 7th</li>
 </ul>
+
+<hr />
+
+<ng-template #load_message>...loading...</ng-template>
+<div *ngIf="teamSeriesScratch;else load_message" class="row small-up-3 large-up-4">
+  <h4>Team High Score Series Scratch</h4>
+  <div class="column leader-card" *ngFor="let team of teamSeriesScratch">
+    <div class="card">
+      <i class="material-icons">stars</i>
+      <img src="assets/logos/team{{team.tid}}.png">
+      <div class="card-section">
+        <h3>{{ team.tname }}</h3>
+        <p>{{ team.pins }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr />
+
+<ng-template #load_message>...loading...</ng-template>
+<div *ngIf="teamSeriesHandicap;else load_message" class="row small-up-3 large-up-4">
+  <h4>Team High Score Series Handicap</h4>
+  <div class="column leader-card" *ngFor="let team of teamSeriesHandicap">
+    <div class="card">
+      <i class="material-icons">stars</i>
+      <img src="assets/logos/team{{team.tid}}.png">
+      <div class="card-section">
+        <h3>{{ team.tname }}</h3>
+        <p>{{ team.pins }}</p>
+      </div>
+    </div>
+  </div>
+</div>
 
 <hr />
 
@@ -14,7 +48,7 @@
   <em>Loading Mens High Score Game Scratch Leaders...</em>
 </div>
 <div *ngIf="mensGameScratch" class="row small-up-3 large-up-4">
-<h4>Mens High Score Game Scratch</h4>
+  <h4>Mens High Score Game Scratch</h4>
   <div class="column leader-card" *ngFor="let player of mensGameScratch">
     <div class="card">
       <i class="material-icons">stars</i>
@@ -33,7 +67,7 @@
   <em>Loading Mens High Score Game Handicap Leaders...</em>
 </div>
 <div *ngIf="mensGameHandicap" class="row small-up-3 large-up-4">
-<h4>Mens High Score Game Handicap</h4>
+  <h4>Mens High Score Game Handicap</h4>
   <div class="column leader-card" *ngFor="let player of mensGameHandicap">
     <div class="card">
       <i class="material-icons">stars</i>
@@ -52,7 +86,7 @@
   <em>Loading Mens High Score Series Leaders...</em>
 </div>
 <div *ngIf="mensSeriesScratch" class="row small-up-3 large-up-4">
-<h4>Mens High Score Series Scratch</h4>
+  <h4>Mens High Score Series Scratch</h4>
   <div class="column leader-card" *ngFor="let player of mensSeriesScratch">
     <div class="card">
       <i class="material-icons">stars</i>
@@ -71,7 +105,7 @@
   <em>Loading Mens High Score Series Handicap Leaders...</em>
 </div>
 <div *ngIf="mensSeriesHandicap" class="row small-up-3 large-up-4">
-<h4>Mens High Score Series Handicap</h4>
+  <h4>Mens High Score Series Handicap</h4>
   <div class="column leader-card" *ngFor="let player of mensSeriesHandicap">
     <div class="card">
       <i class="material-icons">stars</i>
@@ -90,7 +124,7 @@
   <em>Loading Womens High Score Game Scratch Leaders...</em>
 </div>
 <div *ngIf="womensGameScratch" class="row small-up-3 large-up-4">
-<h4>Womens High Score Game Scratch</h4>
+  <h4>Womens High Score Game Scratch</h4>
   <div class="column leader-card" *ngFor="let player of womensGameScratch">
     <div class="card">
       <i class="material-icons">stars</i>
@@ -109,7 +143,7 @@
   <em>Loading Womens High Score Game Handicap Leaders...</em>
 </div>
 <div *ngIf="womensGameHandicap" class="row small-up-3 large-up-4">
-<h4>Womens High Score Game Handicap</h4>
+  <h4>Womens High Score Game Handicap</h4>
   <div class="column leader-card" *ngFor="let player of womensGameHandicap">
     <div class="card">
       <i class="material-icons">stars</i>
@@ -128,7 +162,7 @@
   <em>Loading Womens High Score Series Scratch Leaders...</em>
 </div>
 <div *ngIf="womensSeriesScratch" class="row small-up-3 large-up-4">
-<h4>Womens High Score Series Scratch</h4>
+  <h4>Womens High Score Series Scratch</h4>
   <div class="column leader-card" *ngFor="let player of womensSeriesScratch">
     <div class="card">
       <i class="material-icons">stars</i>
@@ -147,7 +181,7 @@
   <em>Loading Womens High Score Series Handicap Leaders...</em>
 </div>
 <div *ngIf="womensSeriesHandicap" class="row small-up-3 large-up-4">
-<h4>Womens High Score Series Handicap</h4>
+  <h4>Womens High Score Series Handicap</h4>
   <div class="column leader-card" *ngFor="let player of womensSeriesHandicap">
     <div class="card">
       <i class="material-icons">stars</i>

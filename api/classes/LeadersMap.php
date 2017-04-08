@@ -117,7 +117,7 @@ class LeadersMap extends Mapper {
 		if($player === 't') {
 
 			// stats for teams
-			
+
 			if($category === 'g') {
 
 				if($handicap === 'y') {
@@ -135,7 +135,7 @@ class LeadersMap extends Mapper {
 				if($handicap === 'y') {
 
 					// get top three team series, with handicap
-					$sql = "SELECT tname, SUM(g1+g2+g3+(hnd*3)) as pins
+					$sql = "SELECT bnp_teams.tid, tname, SUM(g1+g2+g3+(hnd*3)) as pins
 							FROM bnp_players
 							JOIN bnp_teams
 							ON bnp_players.tid = bnp_teams.tid
@@ -147,7 +147,7 @@ class LeadersMap extends Mapper {
 
 				} else {
 					// get top three team series, scratch
-					$sql = "SELECT tname, SUM(g1+g2+g3) as pins
+					$sql = "SELECT bnp_teams.tid, tname, SUM(g1+g2+g3) as pins
 							FROM bnp_players
 							JOIN bnp_teams
 							ON bnp_players.tid = bnp_teams.tid

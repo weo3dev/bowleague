@@ -11,6 +11,8 @@
 <hr />
 
 <ng-template #load_message>...loading...</ng-template>
+
+
 <div *ngIf="teamSeriesScratch;else load_message" class="row small-up-3 large-up-4">
   <h4>Team High Score Series Scratch</h4>
   <div class="column leader-card" *ngFor="let team of teamSeriesScratch">
@@ -27,7 +29,6 @@
 
 <hr />
 
-<ng-template #load_message>...loading...</ng-template>
 <div *ngIf="teamSeriesHandicap;else load_message" class="row small-up-3 large-up-4">
   <h4>Team High Score Series Handicap</h4>
   <div class="column leader-card" *ngFor="let team of teamSeriesHandicap">
@@ -44,10 +45,8 @@
 
 <hr />
 
-<div *ngIf="!mensGameScratch">
-  <em>Loading Mens High Score Game Scratch Leaders...</em>
-</div>
-<div *ngIf="mensGameScratch" class="row small-up-3 large-up-4">
+
+<div *ngIf="mensGameScratch;else load_message" class="row small-up-3 large-up-4">
   <h4>Mens High Score Game Scratch</h4>
   <div class="column leader-card" *ngFor="let player of mensGameScratch">
     <div class="card">
@@ -63,10 +62,8 @@
 
 <hr />
 
-<div *ngIf="!mensGameHandicap">
-  <em>Loading Mens High Score Game Handicap Leaders...</em>
-</div>
-<div *ngIf="mensGameHandicap" class="row small-up-3 large-up-4">
+
+<div *ngIf="mensGameHandicap;else load_message" class="row small-up-3 large-up-4">
   <h4>Mens High Score Game Handicap</h4>
   <div class="column leader-card" *ngFor="let player of mensGameHandicap">
     <div class="card">
@@ -82,10 +79,8 @@
 
 <hr />
 
-<div *ngIf="!mensSeriesScratch">
-  <em>Loading Mens High Score Series Leaders...</em>
-</div>
-<div *ngIf="mensSeriesScratch" class="row small-up-3 large-up-4">
+
+<div *ngIf="mensSeriesScratch;else load_message" class="row small-up-3 large-up-4">
   <h4>Mens High Score Series Scratch</h4>
   <div class="column leader-card" *ngFor="let player of mensSeriesScratch">
     <div class="card">
@@ -101,10 +96,8 @@
 
 <hr />
 
-<div *ngIf="!mensSeriesHandicap">
-  <em>Loading Mens High Score Series Handicap Leaders...</em>
-</div>
-<div *ngIf="mensSeriesHandicap" class="row small-up-3 large-up-4">
+
+<div *ngIf="mensSeriesHandicap;else load_message" class="row small-up-3 large-up-4">
   <h4>Mens High Score Series Handicap</h4>
   <div class="column leader-card" *ngFor="let player of mensSeriesHandicap">
     <div class="card">
@@ -120,10 +113,8 @@
 
 <hr />
 
-<div *ngIf="!womensGameScratch">
-  <em>Loading Womens High Score Game Scratch Leaders...</em>
-</div>
-<div *ngIf="womensGameScratch" class="row small-up-3 large-up-4">
+
+<div *ngIf="womensGameScratch;else load_message" class="row small-up-3 large-up-4">
   <h4>Womens High Score Game Scratch</h4>
   <div class="column leader-card" *ngFor="let player of womensGameScratch">
     <div class="card">
@@ -139,10 +130,8 @@
 
 <hr/>
 
-<div *ngIf="!womensGameHandicap">
-  <em>Loading Womens High Score Game Handicap Leaders...</em>
-</div>
-<div *ngIf="womensGameHandicap" class="row small-up-3 large-up-4">
+
+<div *ngIf="womensGameHandicap;else load_message" class="row small-up-3 large-up-4">
   <h4>Womens High Score Game Handicap</h4>
   <div class="column leader-card" *ngFor="let player of womensGameHandicap">
     <div class="card">
@@ -158,10 +147,8 @@
 
 <hr/>
 
-<div *ngIf="!womensSeriesScratch">
-  <em>Loading Womens High Score Series Scratch Leaders...</em>
-</div>
-<div *ngIf="womensSeriesScratch" class="row small-up-3 large-up-4">
+
+<div *ngIf="womensSeriesScratch;else load_message" class="row small-up-3 large-up-4">
   <h4>Womens High Score Series Scratch</h4>
   <div class="column leader-card" *ngFor="let player of womensSeriesScratch">
     <div class="card">
@@ -177,10 +164,8 @@
 
 <hr/>
 
-<div *ngIf="!womensSeriesHandicap">
-  <em>Loading Womens High Score Series Handicap Leaders...</em>
-</div>
-<div *ngIf="womensSeriesHandicap" class="row small-up-3 large-up-4">
+
+<div *ngIf="womensSeriesHandicap;else load_message" class="row small-up-3 large-up-4">
   <h4>Womens High Score Series Handicap</h4>
   <div class="column leader-card" *ngFor="let player of womensSeriesHandicap">
     <div class="card">

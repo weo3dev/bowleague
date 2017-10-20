@@ -1,6 +1,6 @@
 {
   "name": "bowleague",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
@@ -13,6 +13,7 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "^4.4.6",
+    "@angular/cdk": "^2.0.0-beta.12",
     "@angular/common": "^4.4.6",
     "@angular/compiler": "^4.4.6",
     "@angular/core": "^4.4.6",
@@ -26,12 +27,12 @@
     "core-js": "^2.5.1",
     "d3": "^4.11.0",
     "hammerjs": "^2.0.8",
-    "rxjs": "^6.0.0-alpha.0",
+    "rxjs": "^5.0.1",
     "tslint": "^5.0.0",
     "zone.js": "^0.8.18"
   },
   "devDependencies": {
-    "@angular/cli": "1.4.8",
+    "@angular/cli": "1.4.9",
     "@angular/compiler-cli": "^4.4.6",
     "@types/hammerjs": "^2.0.35",
     "@types/jasmine": "^2.6.0",
@@ -48,7 +49,7 @@
     "karma-spec-reporter": "0.0.31",
     "protractor": "~5.2.0",
     "ts-node": "~3.3.0",
-    "tslint": "~5.7.0",
+    "tslint": "~5.8.0",
     "typescript": "~2.5.3"
   }
 }

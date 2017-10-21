@@ -3,24 +3,23 @@
 
 
 <nav>
-	<!-- <img src="assets/images/weo3-logo.png" /> --> <!-- needs to be app logo -->
-	<button md-button [routerLink]="['/']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
-true}">
-		<md-icon>format_list_numbered</md-icon>
-		<div class="caption">standings</div>
-	</button>
-	<button md-button [routerLink]="['/leaders']" routerLinkActive="active">
-		<md-icon>star</md-icon>
-		<div class="caption">leaders</div>
-	</button>
-	<button md-button [routerLink]="['/teams']" routerLinkActive="active">
-		<md-icon>group</md-icon>
-		<div class="caption">teams</div>
-	</button>
-	<button md-button [routerLink]="['/players']" routerLinkActive="active">
-		<md-icon>format_list_bulleted</md-icon>
-		<div class="caption">players</div>
-	</button>
+  <!-- <img src="assets/images/weo3-logo.png" /> --> <!-- needs to be app logo -->
+  <button md-button [routerLink]="['/']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+    <md-icon>format_list_numbered</md-icon>
+    <div class="caption">standings</div>
+  </button>
+  <button md-button [routerLink]="['/leaders']" routerLinkActive="active">
+    <md-icon>star</md-icon>
+    <div class="caption">leaders</div>
+  </button>
+  <button md-button [routerLink]="['/teams']" routerLinkActive="active">
+    <md-icon>group</md-icon>
+    <div class="caption">teams</div>
+  </button>
+  <button md-button [routerLink]="['/players']" routerLinkActive="active">
+    <md-icon>format_list_bulleted</md-icon>
+    <div class="caption">players</div>
+  </button>
 </nav>
 
 <router-outlet></router-outlet>

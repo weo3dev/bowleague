@@ -1,12 +1,9 @@
 <section>
-
-	<div class="team-list" *ngIf="teams;else loading" flex>
-	  <div class="team-list-item" *ngFor="let team of teams; let i=index" [routerLink]="['/teams', team.id]">
-	    <img src="assets/logos/team{{i+1}}.png" alt="{{ team.name }}’s logo">
-	    <p>{{ team.name }}</p>
-	  </div>
-	</div>
-
-	<ng-template #loading>Gathering teams</ng-template>
-
+  <div class="team-list" *ngIf="teams;else loading" flex>
+    <div class="team-list-item" *ngFor="let team of teams; let i=index" [routerLink]="['/teams', team.id]">
+      <img src="assets/logos/team{{i+1}}.png" alt="{{ team.name }}’s logo">
+      <p>{{ team.name }}</p>
+    </div>
+  </div>
+  <ng-template #loading>Gathering teams</ng-template>
 </section>

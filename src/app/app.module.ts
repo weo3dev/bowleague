@@ -4,7 +4,8 @@ import { FormsModule }            from '@angular/forms';
 import { HttpModule }             from '@angular/http';
 import { RouterModule }           from '@angular/router';
 
-import { MaterialModule }         from '@angular/material';
+import { MatCardModule } from '@angular/material';
+
 import 'hammerjs';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -39,7 +40,7 @@ const ROUTES = [
     RouterModule,
     BrowserAnimationsModule,
     NgxChartsModule,
-    MaterialModule.forRoot(),
+    MatCardModule,
     RouterModule.forRoot(ROUTES)    
   ],
   declarations: [
@@ -53,7 +54,7 @@ const ROUTES = [
     TabContentComponent
   ],
   exports: [
-    MaterialModule
+    MatCardModule
   ],
   bootstrap: [
     AppComponent

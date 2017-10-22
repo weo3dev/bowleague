@@ -1,4 +1,4 @@
-[![Build Status](https://api.travis-ci.org/metavurt/ng-bla.svg?branch=master)](https://travis-ci.org/metavurt/ng-bla)
+[![Build Status](https://api.travis-ci.org/metavurt/bowleague.svg?branch=master)](https://travis-ci.org/metavurt/bowleague)
 [![Dependency Status](https://david-dm.org/metavurt/bowleague.svg)](https://david-dm.org/metavurt/bowleague)
 [![devDependency Status](https://david-dm.org/metavurt/bowleague/dev-status.svg)](https://david-dm.org/metavurt/bowleague?type=dev&view=list)
 

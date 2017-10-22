@@ -31,3 +31,6 @@ before_script:
 
 script:
   - npm run build
+
+
+

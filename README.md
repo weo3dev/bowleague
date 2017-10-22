@@ -1,6 +1,6 @@
 [![Build Status](https://api.travis-ci.org/metavurt/ng-bla.svg?branch=master)](https://travis-ci.org/metavurt/ng-bla)
-[![Dependency Status](https://david-dm.org/metavurt/ng-bla.svg)](https://david-dm.org/metavurt/ng-bla)
-[![devDependency Status](https://david-dm.org/metavurt/ng-bla/dev-status.svg)](https://david-dm.org/metavurt/ng-bla?type=dev&view=list)
+[![Dependency Status](https://david-dm.org/metavurt/bowleague.svg)](https://david-dm.org/metavurt/bowleague)
+[![devDependency Status](https://david-dm.org/metavurt/bowleague/dev-status.svg)](https://david-dm.org/metavurt/bowleague?type=dev&view=list)
 
 - [Intro](#intro)
 - [Requirements](#requirements)

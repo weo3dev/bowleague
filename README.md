@@ -13,12 +13,11 @@
 - [Todo](#todo)
 - [License](#license)
 
-This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0.
+This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.4.2.
 
 
-[Take a look](http://www.weo3.com/bowleague)
+[Take a look at it here](http://www.weo3.com/bowleague)
 
-**As of the latest release of Angular (4.0), MaterialDesign warns about peer dependency, but with no adverse affects**
 
 # Intro
 
@@ -36,7 +35,7 @@ npm-check-updates for optional below
 # Installing
 
 ```bash
-$ git clone --depth 1 https://github.com/metavurt/ng-bla.git [your-choice-name-goes-here]
+$ git clone --depth 1 https://github.com/metavurt/bowleague.git [your-choice-name-goes-here]
 $ cd [your-choice-name-goes-here]
 
 # install dependencies
@@ -50,13 +49,15 @@ $ npm outdated
 $ ncu
 # if the feedback looks too unstable, then update with 
 $ ncu -u
-# afterward, re-run npm install and re-confirm with npm outdated
+# afterward, delete node_modules
+$ rm -rf node_modules
+# and then re-run npm install and re-confirm with npm outdated
 # disregard obvious misalignments (such as pinned modules based on necessary previous testing) unless large errors are discovered
-# then please alert me at https://github.com/metavurt/ng-bla/issues
+# if large errors seen, please do me a favor and alert me at https://github.com/metavurt/bowleague/issues
 ```
 
 # Running
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload as you edit source files.
 
 
 ## Build
@@ -74,7 +75,6 @@ Before running the tests make sure you are serving the app via `ng serve`.
 
 
 _Does not rely on any global dependencies._
-
 
 
 ## Further help
@@ -124,7 +124,7 @@ _Does not rely on any global dependencies._
 
 - ~~Track player stats per week, per game~~ - this page more as a directory
 - ~~use HighCharts or similar to graph stats~~ - this page more as a directory
-- Responsive - yes and using a newer media query approach for break points
+- ~~Responsive - yes and using a newer media query approach for break points!!
 - player profile can be clicked to go to their page (or team page :question: [undecided])
 - per the first two above line items - sortable by player name alpha, team name alpha
 

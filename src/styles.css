@@ -1,8 +1,10 @@
 @import "foundation.min.css";
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
 
 /*****************************************
 
-weo3 dev & design :: revised 03.28.17 
+weo3 dev & design :: revised October 23, 2017
 
 1. Elements
 2. Material Design amendments
@@ -67,30 +69,30 @@ nav img {
     display: none;
 }
 
-nav .mat-button {
+nav button {
     flex: 1;
     border-radius: 0;
     line-height: 1;
     background: transparent;
 }
 
-    nav .mat-button, nav .mat-button:visited {
+    nav button, nav button:visited {
         color: #565656;
     }
 
-    nav .mat-button.active {
+    nav button.active {
         background: #F27D0C;
     }
 
-    .mat-button md-icon, .mat-button .caption {
+    button mat-icon, button .caption {
         color: #565656;
     }
 
-    .mat-button.active md-icon, .mat-button.active .caption {
+    button.active mat-icon, button.active .caption {
         color: #FFF;
     }
 
-    .mat-button .caption {
+    button .caption {
         font-variant: small-caps;
         font-weight: 400;
     }
@@ -173,22 +175,23 @@ table tbody tr+tr td {
             margin: .25em 1em .25em .25em;
         }
 
-        nav .mat-button {
+        nav button {
             flex: auto 0;
+            padding: 0 1em;
         }
 
-        nav .mat-button md-icon {
+        nav button .mat-icon {
             display: none;
         }
 
-        nav .mat-button.active {
+        nav button.active {
             box-shadow: inset 0 -4px 0 rgba(255,255,255,1);
         }
-            nav .mat-button.active:hover {
+            nav button.active:hover {
                 cursor: default;
             }
 
-        nav .mat-button .caption {
+        nav button .caption {
             color: #FFF;
             font-variant: small-caps;
             font-weight: 400;

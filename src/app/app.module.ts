@@ -5,6 +5,7 @@ import { HttpModule }             from '@angular/http';
 import { RouterModule }           from '@angular/router';
 
 import { MatCardModule } from '@angular/material';
+import { MatIconModule } from '@angular/material';
 
 import 'hammerjs';
 
@@ -41,6 +42,7 @@ const ROUTES = [
     BrowserAnimationsModule,
     NgxChartsModule,
     MatCardModule,
+    MatIconModule,
     RouterModule.forRoot(ROUTES)    
   ],
   declarations: [

@@ -13,10 +13,10 @@ import 'rxjs/add/operator/mergeMap';
 })
 export class AppComponent implements OnInit {
 
-  currentTitle: string; 
+  currentTitle: string;
 
   constructor(private router: Router, private activatedRoute: ActivatedRoute, private titleService: Title) {
-  	
+
     /* implement autoscroll to top, on new route */
   	router.events.subscribe((val) => {
   		if (val instanceof NavigationEnd) {

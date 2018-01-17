@@ -29,7 +29,7 @@ const ROUTES = [
   { path: 'teams/:id', component: TeampageComponent, data: { title: 'Teams' } },
   { path: 'leaders', component: LeadersComponent, data: { title: 'Leaderboard' } },
   { path: 'players', component: PlayersComponent, data: { title: 'Players' } },
-  { path: '**', redirectTo: 'home' }  
+  { path: '**', redirectTo: 'home' }
 ];
 
 
@@ -43,7 +43,7 @@ const ROUTES = [
     NgxChartsModule,
     MatCardModule,
     MatIconModule,
-    RouterModule.forRoot(ROUTES)    
+    RouterModule.forRoot(ROUTES)
   ],
   declarations: [
     AppComponent,

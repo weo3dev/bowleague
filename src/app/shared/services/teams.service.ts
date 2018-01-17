@@ -30,7 +30,7 @@ export class TeamsService {
     .map(team => team.json())
     //.map(team => team.map(this.toTeam))
     .catch(this.handleError);
-  } 
+  }
 
   /* reformat the data to fit Team model */
   private toTeam(team:any): Team {

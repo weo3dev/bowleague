@@ -2,11 +2,8 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import { Team } from '../shared/models/team';
 import { Player } from '../shared/models/player';
-
 import { TeamsService } from '../shared/services/teams.service';
-
 import { WindowRef } from '../WindowRef';
-
 import 'rxjs/add/operator/switchMap';
 
 @Component({
@@ -15,10 +12,10 @@ import 'rxjs/add/operator/switchMap';
   providers: [TeamsService, WindowRef]
 })
 export class TeampageComponent implements OnInit {
-  
+
   errorMessage: string;
   teamID: number;
-  team: Team;  
+  team: Team;
 
   chartType = 'bar-vertical';
   chart: any;
@@ -69,10 +66,10 @@ export class TeampageComponent implements OnInit {
   autoScale = true;
 
 
-  // future addition for color scheme: match the teams color(s) 
+  // future addition for color scheme: match the teams color(s)
   colorScheme = {
     domain: ['#5AA454', '#A10A28', '#C7B42C', '#336699']
-  }; 
+  };
 
   constructor(
     private route: ActivatedRoute,
